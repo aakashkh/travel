@@ -1,4 +1,4 @@
-baseURL = 'https://aakashkh.github.io/travel'
+baseURL = 'https://aakashkh.github.io/travel/'
 languageCode = 'en-gb'
 title = 'Travel Itinerary'
 theme = 'PaperMod'
