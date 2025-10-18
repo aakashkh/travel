@@ -54,14 +54,14 @@ theme = 'PaperMod'
     url = "/"
     weight = 10
   [[menu.main]]
-    name = "Kuari Pass"
-    url = "/posts/kuari-pass/"
+    name = "Posts"
+    url = "/posts/"
     weight = 20
   [[menu.main]]
-    name = "Dharamshala"
-    url = "/posts/dharamshala/"
+    name = "Categories"
+    url = "/categories/"
     weight = 30
   [[menu.main]]
-    name = "Kota Road Trip"
-    url = "/posts/kota-trip/"
+    name = "Tags"
+    url = "/tags/"
     weight = 40
