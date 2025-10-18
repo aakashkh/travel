@@ -21,13 +21,12 @@ weight: 1
 keywords: ["kuari pass trek", "lord curzon trail", "tungnath temple", "chandrashila peak", "himalayan trekking", "uttarakhand treks"]
 ---
 
-{{< figure src="/images/kuari-pass/kuari-hero.gif" alt="Kuari Pass panoramic view" caption="The breathtaking 360° view from Kuari Pass showcasing the majestic Himalayan range" >}}
+![Kuari Pass panoramic view](/images/kuari-pass/kuari-hero.gif)
+*The breathtaking 360° view from Kuari Pass showcasing the majestic Himalayan range*
 
 Experience the legendary **"Lord Curzon Trail"** and visit the world's highest Shiva temple in this incredible Himalayan adventure combining two spectacular treks.
 
-{{< alert "info" >}}
-**Quick Facts:** Two epic treks in one journey - explore the historic Lord Curzon Trail and reach the sacred Tungnath temple, the world's highest Shiva shrine at 3,680m.
-{{< /alert >}}
+> **ℹ️ Quick Facts:** Two epic treks in one journey - explore the historic Lord Curzon Trail and reach the sacred Tungnath temple, the world's highest Shiva shrine at 3,680m.
 
 ## Trek Overview
 
@@ -41,7 +40,19 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 | **Highlights** | Lord Curzon Trail, 360° views | Highest Shiva temple, Sunrise |
 | **Trek Distance** | 22 km | 5 km (one way) |
 
-{{< gallery dir="/images/kuari-pass/gallery/" >}}
+### 📸 Photo Gallery
+
+![Kuari Summit](/images/kuari-pass/gallery/kuari-summit.jpg)
+*Summit views from Kuari Pass*
+
+![Mountain View](/images/kuari-pass/gallery/mountain-view.jpg)
+*Panoramic mountain ranges*
+
+![Trek Path](/images/kuari-pass/gallery/trek-path.jpg)
+*The scenic trekking path*
+
+![Sunrise](/images/kuari-pass/gallery/sunrise.jpg)
+*Beautiful sunrise in the mountains*
 
 ## Detailed Itinerary
 
@@ -114,7 +125,6 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 
 ## Best Time to Visit
 
-{{< weather-guide >}}
 ### 🌨️ Winter (December-March)
 - **Temperature:** -5°C to 10°C
 - **Highlights:** Snow-covered landscapes, clear mountain views
@@ -132,11 +142,8 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 - **Highlights:** Crystal clear views, dry trails
 - **Perfect for:** Photography, experienced trekkers
 - **Best feature:** Unobstructed mountain views
-{{< /weather-guide >}}
 
-{{< alert "warning" >}}
-**Avoid Monsoon (July-August):** Heavy rainfall makes trails slippery and dangerous. Mountain views are often obscured by clouds.
-{{< /alert >}}
+> **⚠️ Warning:** Avoid Monsoon (July-August) - Heavy rainfall makes trails slippery and dangerous. Mountain views are often obscured by clouds.
 
 ## Packing List
 
@@ -258,9 +265,7 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 
 ## Conclusion
 
-{{< alert "success" >}}
-**Ready for Adventure?** Both Kuari Pass and Chopta-Tungnath-Chandrashila offer incredible Himalayan experiences suitable for beginners and experienced trekkers alike.
-{{< /alert >}}
+> **✅ Ready for Adventure?** Both Kuari Pass and Chopta-Tungnath-Chandrashila offer incredible Himalayan experiences suitable for beginners and experienced trekkers alike.
 
 The combination of natural beauty, spiritual significance, and adventure makes these treks unforgettable. Whether you choose the historic Lord Curzon Trail or the sacred journey to the world's highest Shiva temple, these treks will leave you with memories to last a lifetime.
 
