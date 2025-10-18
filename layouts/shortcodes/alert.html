@@ -1,0 +1,8 @@
+{{ $type := .Get 0 }}
+{{ $icons := dict "info" "ℹ️" "warning" "⚠️" "success" "✅" "danger" "❌" }}
+{{ $colors := dict "info" "#e3f2fd" "warning" "#fff3e0" "success" "#e8f5e8" "danger" "#ffebee" }}
+
+<div class="alert alert-{{ $type }}" style="background-color: {{ index $colors $type }}; border-left: 4px solid {{ if eq $type "info" }}#2196f3{{ else if eq $type "warning" }}#ff9800{{ else if eq $type "success" }}#4caf50{{ else }}#f44336{{ end }}; padding: 15px; margin: 20px 0; border-radius: 4px;">
+  <strong>{{ index $icons $type }} {{ if eq $type "info" }}Info{{ else if eq $type "warning" }}Warning{{ else if eq $type "success" }}Success{{ else }}Danger{{ end }}:</strong>
+  {{ .Inner | markdownify }}
+</div>

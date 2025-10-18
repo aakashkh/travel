@@ -1,0 +1,78 @@
+baseURL = 'https://aakashkh.github.io/travel/'
+languageCode = 'en-gb'
+title = 'Travel Itinerary'
+theme = 'blowfish'
+
+# Blowfish theme settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+[params]
+  # Layout settings
+  layout = "single"
+  showTableOfContents = true
+  showReadingTime = true
+  showWordCount = true
+  showBreadcrumbs = true
+  showEdit = false
+  showViews = false
+  showLikes = false
+  showDateUpdated = false
+  
+  # Article layout
+  article = { showHero = true, heroStyle = "background", showBreadcrumbs = true, showDate = true, showDateUpdated = false, showAuthor = true, showPagination = true, invertPagination = false, showReadingTime = true, showTableOfContents = true, showTaxonomies = true, showWordCount = true, showSummary = true, sharingLinks = false, showComments = true }
+  
+  # Comments configuration
+  [params.comments]
+    enabled = true
+    provider = "giscus"  # Options: disqus, utterances, giscus
+    
+    # Giscus settings (GitHub Discussions)
+    [params.comments.giscus]
+      repo = "aakashkh/travel"          # GitHub repo
+      repoId = ""                       # Get from giscus.app after setup
+      category = "General"              # Discussion category
+      categoryId = ""                   # Get from giscus.app after setup
+      mapping = "pathname"
+      reactionsEnabled = true
+      emitMetadata = false
+      inputPosition = "bottom"
+      theme = "preferred_color_scheme"
+      lang = "en"
+  
+  # Alternative: Utterances (simpler setup)
+  # [params.comments.utterances]
+  #   repo = "your-username/your-repo"
+  #   issueTerm = "pathname"
+  #   theme = "github-light"
+  
+  [params.author]
+    name = "Aakash Khandelwal"
+    headline = "Travel Enthusiast & Adventure Seeker"
+    bio = "Exploring the world one trek at a time"
+  description = "Epic Himalayan Adventures Await - Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations"
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Kuari Pass"
+    url = "/posts/kuari-pass/"
+    weight = 20
+  [[menu.main]]
+    name = "Dharamshala"
+    url = "/posts/dharamshala/"
+    weight = 30
+  [[menu.main]]
+    name = "Kota Road Trip"
+    url = "/posts/kota-trip/"
+    weight = 40

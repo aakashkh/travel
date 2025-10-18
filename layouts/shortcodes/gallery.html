@@ -1,0 +1,8 @@
+{{ $dir := .Get "dir" }}
+<div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 20px 0;">
+  <!-- Placeholder for gallery images -->
+  <div class="gallery-item" style="border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 8px;">
+    <p>📸 Gallery: {{ $dir }}</p>
+    <small>Add images to {{ $dir }} directory</small>
+  </div>
+</div>

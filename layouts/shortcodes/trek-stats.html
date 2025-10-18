@@ -1,0 +1,27 @@
+{{ $altitude := .Get "altitude" }}
+{{ $duration := .Get "duration" }}
+{{ $difficulty := .Get "difficulty" }}
+{{ $distance := .Get "distance" }}
+
+<div class="trek-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+  <div class="stat-item" style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="font-size: 2em; color: #667eea;">🏔️</div>
+    <div style="font-weight: bold; margin: 5px 0;">{{ $altitude }}</div>
+    <div style="font-size: 0.9em; color: #666;">Max Altitude</div>
+  </div>
+  <div class="stat-item" style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="font-size: 2em; color: #667eea;">📅</div>
+    <div style="font-weight: bold; margin: 5px 0;">{{ $duration }}</div>
+    <div style="font-size: 0.9em; color: #666;">Duration</div>
+  </div>
+  <div class="stat-item" style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="font-size: 2em; color: #667eea;">⚡</div>
+    <div style="font-weight: bold; margin: 5px 0;">{{ $difficulty }}</div>
+    <div style="font-size: 0.9em; color: #666;">Difficulty</div>
+  </div>
+  <div class="stat-item" style="text-align: center; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="font-size: 2em; color: #667eea;">🚶</div>
+    <div style="font-weight: bold; margin: 5px 0;">{{ $distance }}</div>
+    <div style="font-size: 0.9em; color: #666;">Distance</div>
+  </div>
+</div>
