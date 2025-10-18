@@ -1,8 +1,8 @@
 ---
 title: "Travel Blog"
 description: "Epic Himalayan Adventures Await - Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations"
-layout: "home"
 ---
+
 
 Welcome to my travel blog! Explore detailed itineraries, costs, and insider tips for incredible adventures across India's most spectacular destinations.
 
