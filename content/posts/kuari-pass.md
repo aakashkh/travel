@@ -45,17 +45,24 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 
 ### 📸 Photo Gallery
 
-![Kuari Summit](/travel/images/kuari-pass/gallery/kuari-summit.jpg)
-*Summit views from Kuari Pass*
-
-![Mountain View](/travel/images/kuari-pass/gallery/mountain-view.jpg)
-*Panoramic mountain ranges*
-
-![Trek Path](/travel/images/kuari-pass/gallery/trek-path.jpg)
-*The scenic trekking path*
-
-![Sunrise](/travel/images/kuari-pass/gallery/sunrise.jpg)
-*Beautiful sunrise in the mountains*
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 20px 0;">
+  <div>
+    <img src="/travel/images/kuari-pass/gallery/kuari-summit.jpg" alt="Kuari Summit" style="width: 100%; border-radius: 8px;">
+    <p style="text-align: center; font-style: italic; margin: 5px 0;">Summit views from Kuari Pass</p>
+  </div>
+  <div>
+    <img src="/travel/images/kuari-pass/gallery/mountain-view.jpg" alt="Mountain View" style="width: 100%; border-radius: 8px;">
+    <p style="text-align: center; font-style: italic; margin: 5px 0;">Panoramic mountain ranges</p>
+  </div>
+  <div>
+    <img src="/travel/images/kuari-pass/gallery/trek-path.jpg" alt="Trek Path" style="width: 100%; border-radius: 8px;">
+    <p style="text-align: center; font-style: italic; margin: 5px 0;">The scenic trekking path</p>
+  </div>
+  <div>
+    <img src="/travel/images/kuari-pass/gallery/sunrise.jpg" alt="Sunrise" style="width: 100%; border-radius: 8px;">
+    <p style="text-align: center; font-style: italic; margin: 5px 0;">Beautiful sunrise in the mountains</p>
+  </div>
+</div>
 
 ## Detailed Itinerary
 
