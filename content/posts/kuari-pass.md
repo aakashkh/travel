@@ -8,6 +8,8 @@ author: "Aakash Khandelwal"
 description: "Complete guide to Kuari Pass and Chopta-Tungnath-Chandrashila trek - Lord Curzon Trail with stunning Himalayan views"
 featured_image: "/travel/images/kuari-pass/kuari-hero.gif"
 featured_image_alt: "Panoramic view of snow-capped Himalayan peaks from Kuari Pass"
+ShowToc: true
+TocOpen: false
 showTableOfContents: true
 showReadingTime: true
 showWordCount: true
@@ -17,6 +19,7 @@ showAuthor: true
 showHero: true
 heroStyle: "background"
 layoutBackgroundHeaderSpace: false
+comments: true
 weight: 1
 keywords: ["kuari pass trek", "lord curzon trail", "tungnath temple", "chandrashila peak", "himalayan trekking", "uttarakhand treks"]
 ---

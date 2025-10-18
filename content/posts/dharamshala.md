@@ -6,7 +6,10 @@ tags: ["dharamshala", "mcleod-ganj", "palampur", "kareri", "himachal", "dalai-la
 categories: ["Hill Station", "Cultural"]
 author: "Aakash Khandelwal"
 description: "Chasing the Mountain Air - A whirlwind trip from Gurgaon to Dharamshala and beyond, exploring the spiritual heart of Himachal Pradesh"
-featured_image: "/images/dharmshala/dharamshala-hero.jpg"
+featured_image: "/travel/images/dharmshala/dharamshala-hero.jpg"
+ShowToc: true
+TocOpen: false
+comments: true
 featured_image_alt: "Scenic view of Dharamshala with Dhauladhar mountains"
 toc: true
 readingTime: true
@@ -15,7 +18,8 @@ weight: 3
 keywords: ["dharamshala travel", "mcleod ganj", "dalai lama", "triund trek", "himachal pradesh", "tibetan culture"]
 ---
 
-{{< figure src="/images/dharmshala/dharamshala-hero.jpg" alt="Dharamshala mountain view" caption="The serene beauty of Dharamshala nestled in the Dhauladhar mountains" >}}
+![Dharamshala mountain view](/travel/images/dharmshala/dharamshala-hero.jpg)
+*The serene beauty of Dharamshala nestled in the Dhauladhar mountains*
 
 Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural beauty of Dharamshala, the Dalai Lama's residence and gateway to incredible Himalayan adventures.
 
@@ -108,7 +112,8 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 
 ### McLeod Ganj (Upper Dharamshala)
 
-{{< figure src="/images/dharmshala/gallery/mcleod-ganj.jpg" alt="McLeod Ganj" caption="The vibrant streets of McLeod Ganj - Little Lhasa" >}}
+![McLeod Ganj](/travel/images/dharmshala/gallery/mcleod-ganj.jpg)
+*The vibrant streets of McLeod Ganj - Little Lhasa*
 
 **Tsuglagkhang Complex**
 - Dalai Lama's official residence
@@ -116,7 +121,8 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 - Tibet Museum with artifacts
 - Prayer wheels and stupas
 
-{{< figure src="/images/dharmshala/gallery/dalai-lama-temple.jpg" alt="Dalai Lama Temple" caption="The peaceful Dalai Lama Temple complex" >}}
+![Dalai Lama Temple](/travel/images/dharmshala/gallery/dalai-lama-temple.jpg)
+*The peaceful Dalai Lama Temple complex*
 
 **Bhagsu Area**
 - Bhagsu Waterfall (especially beautiful in monsoon)
