@@ -49,6 +49,21 @@ minify = true
   
   # Show posts on homepage
   mainSections = ["posts"]
+  
+  # Comments using Giscus (GitHub Discussions)
+  [params.giscus]
+    repo = "aakashkh/travel"
+    repoId = "R_kgDONhqJJw"
+    category = "General"
+    categoryId = "DIC_kwDONhqJJ84ClIJj"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"
+    lang = "en"
+    loading = "lazy"
 
 # Profile mode - disabled to show homepage content
 [params.profileMode]
