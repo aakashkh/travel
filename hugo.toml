@@ -17,6 +17,7 @@ theme = 'blowfish'
 [params]
   # Layout settings
   layout = "single"
+  homepage = { layout = "page" }
   showTableOfContents = true
   showReadingTime = true
   showWordCount = true
@@ -25,6 +26,9 @@ theme = 'blowfish'
   showViews = false
   showLikes = false
   showDateUpdated = false
+  
+  # Homepage layout
+  homepage = { layout = "page" }
   
   # Article layout
   article = { showHero = true, heroStyle = "background", showBreadcrumbs = true, showDate = true, showDateUpdated = false, showAuthor = true, showPagination = true, invertPagination = false, showReadingTime = true, showTableOfContents = true, showTaxonomies = true, showWordCount = true, showSummary = true, sharingLinks = false, showComments = true }
