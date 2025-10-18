@@ -47,12 +47,6 @@ minify = true  # Enables minification
   showtoc = false
   tocopen = false
 
-# Home page info (customize for your travel blog intro)
-# THIS SECTION IS COMMENTED OUT TO AVOID CONFLICT WITH profileMode
-# [params.homeInfoParams]
-#   Title = "Welcome to My Travel Journeys"
-#   Content = "Exploring the world, one destination at a time. Check out my latest posts below."
-
 # Profile mode (optional: adds avatar/buttons to home; enable if wanted)
 [params.profileMode]
   enabled = true
