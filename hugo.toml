@@ -4,7 +4,8 @@ title = "Travel Blog"  # Update to your site title
 theme = "PaperMod"
 
 # Site params
-paginate = 5
+[pagination]
+  pagerSize = 5
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
@@ -48,7 +49,7 @@ minify = true  # Enables minification
   enabled = true
   title = "Aakash Kh"
   subtitle = "Wanderlust Enthusiast"
-  imageUrl = "<img>/images/avatar.jpg"  # Add your photo to static/images/
+  imageUrl = "/images/avatar.jpg"  # Add your photo to static/images/
   imageWidth = 120
   imageHeight = 120
   buttons = [
