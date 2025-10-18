@@ -61,10 +61,12 @@ A travel blog built with Hugo featuring enhanced blog posts with custom shortcod
 
 ## 🎨 Custom Features
 
-- **Custom Shortcodes:** Alert boxes, galleries, trek stats, weather guides
+- **Image Slider/Carousel:** Hugo Codex slider for photo galleries
+- **GitHub Comments:** Giscus integration using GitHub Discussions
+- **Custom Shortcodes:** Alert boxes, trek stats, weather guides
 - **Enhanced Blog Posts:** Featured images, TOC, reading time
 - **Organized Images:** Structured gallery system
-- **Responsive Design:** Mobile-friendly layouts
+- **Responsive Design:** Mobile-friendly layouts with wider content area
 
 ## 🔄 Hugo Build Process
 
@@ -75,9 +77,33 @@ A travel blog built with Hugo featuring enhanced blog posts with custom shortcod
 ## 📝 Adding New Posts
 
 1. Create `.md` file in `content/posts/`
-2. Add front matter with metadata
+2. Add front matter with metadata:
+   ```yaml
+   ---
+   title: "Your Post Title"
+   ShowToc: true
+   comments: true
+   featured_image: "/travel/images/your-image.jpg"
+   ---
+   ```
 3. Use custom shortcodes for enhanced content
 4. Add images to `static/images/[post-name]/`
+
+## 🖼️ Image Slider Usage
+
+```markdown
+{{< slider id="my-gallery" >}}
+  <div><img src="/travel/images/photo1.jpg" alt="Description"></div>
+  <div><img src="/travel/images/photo2.jpg" alt="Description"></div>
+{{< /slider >}}
+```
+
+## 💬 Comments System
+
+- **Powered by:** GitHub Discussions (Giscus)
+- **Features:** Login with GitHub, reactions, replies, moderation
+- **Setup:** Enable Discussions in GitHub repo settings
+- **Usage:** Add `comments: true` to post front matter
 
 ## 🛠️ Development Workflow
 
