@@ -46,19 +46,13 @@ minify = true
   hideSummary = false
   showtoc = false
   tocopen = false
+  
+  # Show posts on homepage
+  mainSections = ["posts"]
 
-# Profile mode
+# Profile mode - disabled to show homepage content
 [params.profileMode]
-  enabled = true
-  title = "Aakash Kh"
-  subtitle = "Wanderlust Enthusiast"
-  imageUrl = "/images/avatar.jpg"
-  imageWidth = 120
-  imageHeight = 120
-  buttons = [
-    {name = "Posts", url = "posts/"},
-    {name = "Tags", url = "tags/"}
-  ]
+  enabled = false
 
 # Menu
 [menu]
