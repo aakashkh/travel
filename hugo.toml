@@ -1,7 +1,7 @@
 baseURL = 'https://aakashkh.github.io/travel'
 languageCode = 'en-gb'
 title = 'Travel Itinerary'
-theme = 'blowfish'
+theme = 'PaperMod'
 
 # Blowfish theme settings
 [markup]
@@ -12,55 +12,41 @@ theme = 'blowfish'
 [taxonomies]
   tag = "tags"
   category = "categories"
-  series = "series"
 
 [params]
-  # Layout settings
-  layout = "single"
-  showTableOfContents = true
-  showReadingTime = true
-  showWordCount = true
-  showBreadcrumbs = true
-  showEdit = false
-  showViews = false
-  showLikes = false
-  showDateUpdated = false
-  
-  # Homepage layout
-  homepage = { layout = "page" }
-  
-  # Article layout
-  article = { showHero = true, heroStyle = "background", showBreadcrumbs = true, showDate = true, showDateUpdated = false, showAuthor = true, showPagination = true, invertPagination = false, showReadingTime = true, showTableOfContents = true, showTaxonomies = true, showWordCount = true, showSummary = true, sharingLinks = false, showComments = true }
-  
-  # Comments configuration
-  [params.comments]
-    enabled = true
-    provider = "giscus"  # Options: disqus, utterances, giscus
-    
-    # Giscus settings (GitHub Discussions)
-    [params.comments.giscus]
-      repo = "aakashkh/travel"          # GitHub repo
-      repoId = ""                       # Get from giscus.app after setup
-      category = "General"              # Discussion category
-      categoryId = ""                   # Get from giscus.app after setup
-      mapping = "pathname"
-      reactionsEnabled = true
-      emitMetadata = false
-      inputPosition = "bottom"
-      theme = "preferred_color_scheme"
-      lang = "en"
-  
-  # Alternative: Utterances (simpler setup)
-  # [params.comments.utterances]
-  #   repo = "your-username/your-repo"
-  #   issueTerm = "pathname"
-  #   theme = "github-light"
-  
-  [params.author]
-    name = "Aakash Khandelwal"
-    headline = "Travel Enthusiast & Adventure Seeker"
-    bio = "Exploring the world one trek at a time"
+  # PaperMod settings
+  env = "production"
+  title = "Travel Itinerary"
   description = "Epic Himalayan Adventures Await - Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations"
+  keywords = ["travel", "trekking", "himalayas", "adventure", "blog"]
+  author = "Aakash Khandelwal"
+  
+  # Theme features
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  
+  # Home page
+  [params.homeInfoParams]
+    Title = "Epic Himalayan Adventures Await 🏔️"
+    Content = "Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations. Detailed itineraries, costs, and insider tips for your perfect adventure."
+  
+  # Social icons
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/aakashkh"
   
 [menu]
   [[menu.main]]
