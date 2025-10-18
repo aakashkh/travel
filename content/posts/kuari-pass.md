@@ -6,7 +6,7 @@ tags: ["kuari-pass", "chopta", "tungnath", "chandrashila", "himalayan-trek"]
 categories: ["Trekking", "Himalayas"]
 author: "Aakash Khandelwal"
 description: "Complete guide to Kuari Pass and Chopta-Tungnath-Chandrashila trek - Lord Curzon Trail with stunning Himalayan views"
-featured_image: "/images/kuari-pass/kuari-hero.gif"
+featured_image: "/travel/images/kuari-pass/kuari-hero.gif"
 featured_image_alt: "Panoramic view of snow-capped Himalayan peaks from Kuari Pass"
 showTableOfContents: true
 showReadingTime: true
@@ -21,7 +21,7 @@ weight: 1
 keywords: ["kuari pass trek", "lord curzon trail", "tungnath temple", "chandrashila peak", "himalayan trekking", "uttarakhand treks"]
 ---
 
-![Kuari Pass panoramic view](/images/kuari-pass/kuari-hero.gif)
+![Kuari Pass panoramic view](/travel/images/kuari-pass/kuari-hero.gif)
 *The breathtaking 360° view from Kuari Pass showcasing the majestic Himalayan range*
 
 Experience the legendary **"Lord Curzon Trail"** and visit the world's highest Shiva temple in this incredible Himalayan adventure combining two spectacular treks.
@@ -42,16 +42,16 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 
 ### 📸 Photo Gallery
 
-![Kuari Summit](/images/kuari-pass/gallery/kuari-summit.jpg)
+![Kuari Summit](/travel/images/kuari-pass/gallery/kuari-summit.jpg)
 *Summit views from Kuari Pass*
 
-![Mountain View](/images/kuari-pass/gallery/mountain-view.jpg)
+![Mountain View](/travel/images/kuari-pass/gallery/mountain-view.jpg)
 *Panoramic mountain ranges*
 
-![Trek Path](/images/kuari-pass/gallery/trek-path.jpg)
+![Trek Path](/travel/images/kuari-pass/gallery/trek-path.jpg)
 *The scenic trekking path*
 
-![Sunrise](/images/kuari-pass/gallery/sunrise.jpg)
+![Sunrise](/travel/images/kuari-pass/gallery/sunrise.jpg)
 *Beautiful sunrise in the mountains*
 
 ## Detailed Itinerary
