@@ -1,4 +1,4 @@
-baseURL = 'https://aakashkh.github.io/travel/'
+baseURL = 'http://localhost:1313/'
 languageCode = 'en-gb'
 title = 'Travel Itinerary'
 theme = 'PaperMod'
@@ -15,7 +15,7 @@ theme = 'PaperMod'
 
 [params]
   # PaperMod settings
-  env = "production"
+  env = "development"
   title = "Travel Itinerary"
   description = "Epic Himalayan Adventures Await - Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations"
   keywords = ["travel", "trekking", "himalayas", "adventure", "blog"]

@@ -30,7 +30,9 @@ jobs:
           extended: true
       
       - name: Build
-        run: hugo --minify
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --minify --environment production
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

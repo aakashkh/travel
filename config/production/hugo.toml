@@ -1,0 +1,4 @@
+baseURL = 'https://aakashkh.github.io/travel/'
+
+[params]
+  env = "production"
