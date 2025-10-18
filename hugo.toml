@@ -1,90 +1,84 @@
 baseURL = "https://aakashkh.github.io/travel/"
 languageCode = "en-us"
-title = "Travel Blog"  # Update to your site title
+title = "Travel Blog"
 theme = "PaperMod"
 
 # Site params
 [pagination]
-pagerSize = 5
+  pagerSize = 5
+
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-
-minify = true  # Enables minification
+minify = true
 
 # Output formats - ensure HTML is always generated
 [outputs]
- home = ["HTML", "RSS", "JSON"]
- page = ["HTML"]
- section = ["HTML", "RSS"]
- taxonomy = ["HTML", "RSS"]
- term = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
 [params]
- env = "production"  # Enables analytics, OpenGraph, etc.
- title = "Travel Blog"
- description = "A collection of travel adventures and tips."
- keywords = ["travel", "blog", "adventures"]
- author = "Aakash Kh"  # Your name
- images = ["images/og-image.jpg"]  # Path to OpenGraph image (add one in static/images/)
- DateFormat = "January 2, 2006"
- defaultTheme = "auto"  # 'light', 'dark', or 'auto'
- disableThemeToggle = false
- ShowReadingTime = true
- ShowShareButtons = true
- ShowPostNavLinks = true
- ShowBreadCrumbs = true
- ShowCodeCopyButtons = false
- ShowWordCount = true
- ShowRssButtonInSectionTermList = true
- UseHugoToc = true
- disableSpecial1stPost = false
- disableScrollToTop = false
- comments = false  # Set to true and configure if using Disqus/Netlify
- hidemeta = false
- hideSummary = false
- showtoc = false
- tocopen = false
+  env = "production"
+  title = "Travel Blog"
+  description = "A collection of travel adventures and tips."
+  keywords = ["travel", "blog", "adventures"]
+  author = "Aakash Kh"
+  images = ["images/og-image.jpg"]
+  DateFormat = "January 2, 2006"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
 
-# Home page info (customize for your travel blog intro)
-# THIS SECTION IS COMMENTED OUT TO AVOID CONFLICT WITH profileMode
-# [params.homeInfoParams]
-#   Title = "Welcome to My Travel Journeys"
-#   Content = "Exploring the world, one destination at a time. Check out my latest posts below."
-
-# Profile mode (optional: adds avatar/buttons to home; enable if wanted)
+# Profile mode
 [params.profileMode]
- enabled = true
- title = "Aakash Kh"
- subtitle = "Wanderlust Enthusiast"
- imageUrl = "/images/avatar.jpg"  # Add your photo to static/images/
- imageWidth = 120
- imageHeight = 120
- buttons = [
-    {name = "Posts", url = "posts/"},
-    {name = "Tags", url = "tags/"}
-  ]
+  enabled = true
+  title = "Aakash Kh"
+  subtitle = "Wanderlust Enthusiast"
+  imageUrl = "/images/avatar.jpg"
+  imageWidth = 120
+  imageHeight = 120
+  buttons = [
+    {name = "Posts", url = "posts/"},
+    {name = "Tags", url = "tags/"}
+  ]
 
-# Menu (main navigation)
+# Menu
 [menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 20
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"  # Create content/about.md if needed
-    weight = 30
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
 
-# Social icons (optional)
+# Social icons
 [[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/aakashkh"
+  name = "github"
+  url = "https://github.com/aakashkh"
