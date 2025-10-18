@@ -1,70 +1,80 @@
 baseURL = "https://aakashkh.github.io/travel/"
-languageCode = 'en-gb'
-title = 'Travel Itinerary'
-theme = 'PaperMod'
+languageCode = "en-us"
+title = "Travel Blog"  # Update to your site title
+theme = "PaperMod"
 
-# Blowfish theme settings
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+# Site params
+paginate = 5
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 
-[taxonomies]
-  tag = "tags"
-  category = "categories"
+minify = true  # Enables minification
 
 [params]
-  # PaperMod settings
-  env = "development"
-  title = "Travel Itinerary"
-  description = "Epic Himalayan Adventures Await - Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations"
-  keywords = ["travel", "trekking", "himalayas", "adventure", "blog"]
-  author = "Aakash Khandelwal"
-  
-  # Theme features
+  env = "production"  # Enables analytics, OpenGraph, etc.
+  title = "Travel Blog"
+  description = "A collection of travel adventures and tips."
+  keywords = ["travel", "blog", "adventures"]
+  author = "Aakash Kh"  # Your name
+  images = ["images/og-image.jpg"]  # Path to OpenGraph image (add one in static/images/)
+  DateFormat = "January 2, 2006"
+  defaultTheme = "auto"  # 'light', 'dark', or 'auto'
+  disableThemeToggle = false
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
+  ShowCodeCopyButtons = false
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
   disableSpecial1stPost = false
   disableScrollToTop = false
-  comments = false
+  comments = false  # Set to true and configure if using Disqus/Netlify
   hidemeta = false
   hideSummary = false
-  showtoc = true
+  showtoc = false
   tocopen = false
-  
-  # Home page layout - using _index.md content instead
-  
-  # Homepage mode
-  mode = "auto"
-  
-  # Show posts on homepage
-  mainSections = ["posts"]
-  
-  # Social icons
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/aakashkh"
-  
+
+# Home page info (customize for your travel blog intro)
+[params.homeInfoParams]
+  Title = "Welcome to My Travel Journeys"
+  Content = "Exploring the world, one destination at a time. Check out my latest posts below."
+
+# Profile mode (optional: adds avatar/buttons to home; enable if wanted)
+[params.profileMode]
+  enabled = true
+  title = "Aakash Kh"
+  subtitle = "Wanderlust Enthusiast"
+  imageUrl = "<img>/images/avatar.jpg"  # Add your photo to static/images/
+  imageWidth = 120
+  imageHeight = 120
+  buttons = [
+    {name = "Posts", url = "posts/"},
+    {name = "Tags", url = "tags/"}
+  ]
+
+# Menu (main navigation)
 [menu]
   [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 10
-  [[menu.main]]
+    identifier = "posts"
     name = "Posts"
     url = "/posts/"
-    weight = 20
+    weight = 10
   [[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 30
-  [[menu.main]]
+    identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 40
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"  # Create content/about.md if needed
+    weight = 30
+
+# Social icons (optional)
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/aakashkh"
