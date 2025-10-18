@@ -13,6 +13,14 @@ buildExpired = false
 
 minify = true  # Enables minification
 
+# Output formats - ensure HTML is always generated
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
 [params]
   env = "production"  # Enables analytics, OpenGraph, etc.
   title = "Travel Blog"
