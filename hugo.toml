@@ -38,8 +38,7 @@ theme = 'PaperMod'
   showtoc = true
   tocopen = false
   
-  # Home page layout
-  homeInfoParams = { Title = "Epic Himalayan Adventures Await 🏔️", Content = "Discover breathtaking treks, hidden gems, and unforgettable journeys through India's most spectacular mountain destinations. Detailed itineraries, costs, and insider tips for your perfect adventure." }
+  # Home page layout - using _index.md content instead
   
   # Homepage mode
   mode = "auto"
