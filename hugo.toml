@@ -5,7 +5,7 @@ theme = "PaperMod"
 
 # Site params
 [pagination]
-  pagerSize = 5
+pagerSize = 5
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
