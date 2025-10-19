@@ -1,6 +1,6 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
-  {{- $cleanSummary := .Summary | replaceRE "!\[.*?\]\(.*?\)" "" | replaceRE "\*\*(.*?)\*\*" "$1" | replaceRE "\*(.*?)\*" "$1" | plainify -}}
+  {{- $cleanSummary := .Summary | replaceRE `!\[.*?\]\(.*?\)` "" | replaceRE `\*\*(.*?)\*\*` "$1" | replaceRE `\*(.*?)\*` "$1" | plainify -}}
   {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" $cleanSummary "date" (.Date.Format "2006-01-02") "tags" .Params.tags "categories" .Params.categories) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
