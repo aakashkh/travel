@@ -1,0 +1,32 @@
+<div class="social-share">
+  <h4>📢 Share This Adventure</h4>
+  <div class="share-buttons">
+    <a href="https://twitter.com/intent/tweet?text={{ .Title | urlquery }}&url={{ .Permalink }}" 
+       target="_blank" class="share-btn twitter">
+      🐦 Twitter
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" 
+       target="_blank" class="share-btn facebook">
+      📘 Facebook
+    </a>
+    <a href="https://wa.me/?text={{ .Title | urlquery }}%20{{ .Permalink }}" 
+       target="_blank" class="share-btn whatsapp">
+      💬 WhatsApp
+    </a>
+    <a href="mailto:?subject={{ .Title | urlquery }}&body=Check out this travel guide: {{ .Permalink }}" 
+       class="share-btn email">
+      📧 Email
+    </a>
+    <button onclick="copyToClipboard('{{ .Permalink }}')" class="share-btn copy">
+      🔗 Copy Link
+    </button>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Link copied to clipboard!');
+  });
+}
+</script>

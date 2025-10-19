@@ -1,0 +1,24 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if $related }}
+<div class="related-posts">
+  <h3>🌟 Similar Adventures</h3>
+  <div class="related-grid">
+    {{ range $related }}
+    <div class="related-item">
+      {{ if .Params.featured_image }}
+        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+      {{ end }}
+      <div class="related-content">
+        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        <p>{{ .Summary | truncate 100 }}</p>
+        <div class="related-meta">
+          {{ range first 3 .Params.tags }}
+            <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -85,6 +85,11 @@ minify = true
     url = "tags/"
     weight = 20
   [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "search/"
+    weight = 25
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "about/"
