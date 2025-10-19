@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://aakashkh.github.io/travel/"
 languageCode = "en-us"
 title = "Travel Blog"
 theme = "PaperMod"
