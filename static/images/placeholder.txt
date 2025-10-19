@@ -1,9 +1,0 @@
-Add your trek images here:
-- kuari-pass-hero.jpg (main featured image)
-- kuari-pass-panorama.jpg (panoramic view)
-- kuari-pass-gallery/ (folder for multiple images)
-
-Recommended image sizes:
-- Featured images: 1200x600px
-- Gallery images: 800x600px
-- Thumbnails: 300x200px

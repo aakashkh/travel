@@ -76,27 +76,69 @@ A travel blog built with Hugo featuring enhanced blog posts with custom shortcod
 
 ## 📝 Adding New Posts
 
-1. Create `.md` file in `content/posts/`
-2. Add front matter with metadata:
+1. **Create post file:**
+   ```bash
+   hugo new posts/my-new-post.md
+   ```
+
+2. **Create image folders:**
+   ```
+   assets/images/my-new-post/
+   assets/images/my-new-post/gallery/
+   ```
+
+3. **Add optimized images:**
+   - Hero image: `assets/images/my-new-post/hero.jpg`
+   - Gallery images: `assets/images/my-new-post/gallery/`
+
+4. **Update front matter:**
    ```yaml
    ---
    title: "Your Post Title"
+   featured_image: "/images/my-new-post/hero.jpg"
    ShowToc: true
    comments: true
-   featured_image: "/travel/images/your-image.jpg"
    ---
    ```
-3. Use custom shortcodes for enhanced content
-4. Add images to `static/images/[post-name]/`
 
-## 🖼️ Image Slider Usage
+5. **Use responsive images in content:**
+   ```markdown
+   {{< img src="images/my-new-post/photo.jpg" alt="Description" >}}
+   ```
 
-```markdown
-{{< slider id="my-gallery" >}}
-  <div><img src="/travel/images/photo1.jpg" alt="Description"></div>
-  <div><img src="/travel/images/photo2.jpg" alt="Description"></div>
-{{< /slider >}}
-```
+## 🖼️ Image Management
+
+### Adding Images to New Posts
+
+1. **Create folder structure:**
+   ```
+   assets/images/[post-name]/
+   assets/images/[post-name]/gallery/
+   ```
+
+2. **Optimize images before adding:**
+   - **Format:** JPG/PNG (avoid HEIC)
+   - **Size:** Max 1920px width
+   - **Quality:** 80-90% for hero images, 70-80% for gallery
+
+3. **Use responsive image shortcode:**
+   ```markdown
+   {{< img src="images/post-name/photo.jpg" alt="Description" >}}
+   ```
+
+4. **Gallery slider usage:**
+   ```markdown
+   {{< slider id="my-gallery" >}}
+     <div>{{< img src="images/post-name/gallery/photo1.jpg" alt="Description" >}}</div>
+     <div>{{< img src="images/post-name/gallery/photo2.jpg" alt="Description" >}}</div>
+   {{< /slider >}}
+   ```
+
+### Image Processing Features
+- **Auto-compression:** WebP format at 75% quality
+- **Responsive sizes:** 400px, 800px, 1200px widths
+- **Lazy loading:** Images load when visible
+- **Size reduction:** 50-70% smaller files
 
 ## 💬 Comments System
 
