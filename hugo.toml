@@ -53,9 +53,9 @@ minify = true
   # Comments using Giscus (GitHub Discussions)
   [params.giscus]
     repo = "aakashkh/travel"
-    repoId = "R_kgDONhqJJw"
+    repoId = "R_kgDOQEu-ww"
     category = "Announcements"
-    categoryId = "DIC_kwDONhqJJ84ClIJk"
+    categoryId = "DIC_kwDOQEu-w84Cwyqt"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
