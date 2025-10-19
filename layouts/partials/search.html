@@ -25,7 +25,13 @@
 <div id="search-results"></div>
 
 <script>
-const posts = {{ .Site.RegularPages.ByDate.Reverse | jsonify }};
+let posts = [];
+fetch('/travel/index.json')
+  .then(response => response.json())
+  .then(data => {
+    posts = data;
+    displayResults(posts);
+  });
 const searchInput = document.getElementById('search-input');
 const locationFilter = document.getElementById('location-filter');
 const difficultyFilter = document.getElementById('difficulty-filter');
@@ -41,9 +47,9 @@ function filterPosts() {
   const filtered = posts.filter(post => {
     const matchesQuery = !query || post.title.toLowerCase().includes(query) || 
                         post.content.toLowerCase().includes(query);
-    const matchesLocation = !location || post.params.tags?.includes(location);
-    const matchesDifficulty = !difficulty || post.params.tags?.includes(difficulty);
-    const matchesSeason = !season || post.params.tags?.includes(season);
+    const matchesLocation = !location || (post.tags && post.tags.includes(location));
+    const matchesDifficulty = !difficulty || (post.tags && post.tags.includes(difficulty));
+    const matchesSeason = !season || (post.tags && post.tags.includes(season));
     
     return matchesQuery && matchesLocation && matchesDifficulty && matchesSeason;
   });
@@ -63,7 +69,7 @@ function displayResults(posts) {
       <p>${post.summary}</p>
       <div class="post-meta">
         <span>${post.date}</span>
-        ${post.params.tags ? post.params.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+        ${post.tags ? post.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
       </div>
     </div>
   `).join('');
