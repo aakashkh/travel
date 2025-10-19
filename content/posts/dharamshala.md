@@ -376,15 +376,14 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 ### 📸 Photo Gallery
 
 {{< slider id="dharamshala-gallery" >}}
-  <div>{{< img src="images/dharmshala/gallery/mcleod-ganj.jpg" alt="McLeod Ganj streets" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/dalai-lama-temple.jpg" alt="Dalai Lama Temple complex" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/mountain-trek.jpg" alt="Triund trek path" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/valley-view.jpg" alt="Valley views from trek" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/palampur-tea.jpg" alt="Palampur tea gardens" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/monastery.jpg" alt="Tibetan monastery" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/kareri-lake.jpg" alt="Kareri Lake region" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/mcleodganj-route.jpg" alt="McLeod Ganj streets" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/dharamshal-temple.jpg" alt="Dalai Lama Temple complex" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/hill-view.jpg" alt="Mountain trek views" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/palampur-road.jpg" alt="Palampur tea gardens" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/mcleodganj-church.jpg" alt="McLeod Ganj church" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/kareri.jpg" alt="Kareri Lake region" >}}</div>
   <div>{{< img src="images/dharmshala/gallery/sunset-view.jpg" alt="Sunset from Naddi viewpoint" >}}</div>
-  <div>{{< img src="images/dharmshala/gallery/local-market.jpg" alt="Local Tibetan market" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/kharota.jpg" alt="Kharota village views" >}}</div>
 {{< /slider >}}
 
 ## Conclusion
