@@ -54,8 +54,8 @@ minify = true
   [params.giscus]
     repo = "aakashkh/travel"
     repoId = "R_kgDONhqJJw"
-    category = "General"
-    categoryId = "DIC_kwDONhqJJ84ClIJj"
+    category = "Announcements"
+    categoryId = "DIC_kwDONhqJJ84ClIJk"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
