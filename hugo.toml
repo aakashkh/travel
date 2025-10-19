@@ -74,17 +74,17 @@ minify = true
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/posts/"
+    url = "posts/"
     weight = 10
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
-    url = "/tags/"
+    url = "tags/"
     weight = 20
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about/"
+    url = "about/"
     weight = 30
 
 # Social icons
