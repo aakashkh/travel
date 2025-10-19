@@ -39,6 +39,35 @@
 .search-result {
     border-bottom: 1px solid #eee;
     padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.search-result h3 {
+    margin: 0 0 10px 0;
+}
+
+.search-result h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.search-result h3 a:hover {
+    color: #007acc;
+}
+
+.search-result p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.read-more {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }
 
 .tag {
