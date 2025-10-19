@@ -47,8 +47,8 @@ minify = true
   showtoc = false
   tocopen = false
   
-  # Show posts on homepage
-  mainSections = ["posts"]
+  # Disable automatic post listing on homepage
+  # mainSections = ["posts"]
   
   # Comments using Giscus (GitHub Discussions)
   [params.giscus]
