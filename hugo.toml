@@ -13,6 +13,12 @@ buildFuture = false
 buildExpired = false
 minify = true
 
+# Image processing
+[imaging]
+  resampleFilter = "lanczos"
+  quality = 75
+  anchor = "smart"
+
 # Output formats - ensure HTML is always generated
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -22,7 +28,7 @@ minify = true
   term = ["HTML", "RSS"]
 
 [params]
-  env = "development"
+  env = "production"
   title = "Travel Blog"
   description = "A collection of travel adventures and tips."
   keywords = ["travel", "blog", "adventures"]
@@ -46,9 +52,6 @@ minify = true
   hideSummary = false
   showtoc = false
   tocopen = false
-  
-  # Disable automatic post listing on homepage
-  # mainSections = ["posts"]
   
   # Comments using Giscus (GitHub Discussions)
   [params.giscus]

@@ -16,30 +16,36 @@ Welcome to my travel blog! I document incredible journeys across India's most sp
 
 ## 🌟 Featured Adventures
 
-### 🏔️ Kuari Pass Trek - Lord Curzon Trail
+### 🏔️ [Kuari Pass Trek - Lord Curzon Trail](/posts/kuari-pass/)
 **6 Days | Easy-Moderate | Oct-Apr**
 
 Experience the legendary "Lord Curzon Trail" with breathtaking 360° views of Nanda Devi, Dronagiri, and Kamet peaks. Perfect for beginners seeking their first Himalayan adventure.
 
 *Highlights: Historic trail, panoramic mountain views, oak forests, beginner-friendly*
 
+**[Read Full Guide →](/posts/kuari-pass/)**
+
 ---
 
-### 🏛️ Dharamshala - McLeod Ganj Circuit
+### 🏛️ [Dharamshala - McLeod Ganj Circuit](/posts/dharamshala/)
 **4-5 Days | Easy | Mar-Nov**
 
 Discover the spiritual heart of Himachal Pradesh! Explore the Dalai Lama's residence, trek to Triund peak, experience Tibetan culture, and enjoy stunning Dhauladhar mountain views.
 
 *Highlights: Dalai Lama temple, Triund trek, Tibetan culture, tea gardens*
 
+**[Read Full Guide →](/posts/dharamshala/)**
+
 ---
 
-### 🚗 Kota Heritage Road Trip
+### 🚗 [Kota Heritage Road Trip](/posts/kota-trip/)
 **3 Days | Easy | Oct-Mar**
 
 Journey through Rajasthan's cultural treasures! Visit ancient temples, experience the world's first heritage riverfront, taste authentic Kota kachoris, and explore magnificent palaces.
 
 *Highlights: Garadia Mahadev temple, Chambal riverfront, local cuisine, heritage sites*
+
+**[Read Full Guide →](/posts/kota-trip/)**
 
 ---
 

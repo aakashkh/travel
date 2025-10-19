@@ -46,18 +46,10 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 ### 📸 Photo Gallery
 
 {{< slider id="kuari-gallery" >}}
-  <div>
-    <img src="/images/kuari-pass/gallery/kuari-summit.jpg" alt="Summit views from Kuari Pass">
-  </div>
-  <div>
-    <img src="/images/kuari-pass/gallery/mountain-view.jpg" alt="Panoramic mountain ranges">
-  </div>
-  <div>
-    <img src="/images/kuari-pass/gallery/trek-path.jpg" alt="The scenic trekking path">
-  </div>
-  <div>
-    <img src="/images/kuari-pass/gallery/sunrise.jpg" alt="Beautiful sunrise in the mountains">
-  </div>
+  <div>{{< img src="images/kuari-pass/gallery/kuari-summit.jpg" alt="Summit views from Kuari Pass" >}}</div>
+  <div>{{< img src="images/kuari-pass/gallery/mountain-view.jpg" alt="Panoramic mountain ranges" >}}</div>
+  <div>{{< img src="images/kuari-pass/gallery/trek-path.jpg" alt="The scenic trekking path" >}}</div>
+  <div>{{< img src="images/kuari-pass/gallery/sunrise.jpg" alt="Beautiful sunrise in the mountains" >}}</div>
 {{< /slider >}}
 
 ## Detailed Itinerary

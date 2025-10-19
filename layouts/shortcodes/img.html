@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+
+{{- with resources.Get $src -}}
+  {{- $small := .Resize "400x webp q75" -}}
+  {{- $medium := .Resize "800x webp q75" -}}
+  {{- $large := .Resize "1200x webp q75" -}}
+  
+  <img 
+    src="{{ $medium.RelPermalink }}"
+    srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
+    sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 1200px"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="lazy"
+  >
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="lazy">
+{{- end -}}
