@@ -1,0 +1,29 @@
+kuari_pass:
+  name: "Kuari Pass Trek"
+  location: "Uttarakhand"
+  difficulty: "Moderate"
+  duration: "6 days"
+  best_season: ["October", "November", "December", "January", "February", "March", "April"]
+  altitude: "3,676m"
+  cost_range: "₹17,000-26,000"
+  highlights: ["Lord Curzon Trail", "360° mountain views", "Beginner-friendly"]
+  
+dharamshala:
+  name: "Dharamshala Circuit"
+  location: "Himachal Pradesh"
+  difficulty: "Easy"
+  duration: "4-5 days"
+  best_season: ["March", "April", "May", "June", "September", "October", "November"]
+  altitude: "1,457m"
+  cost_range: "₹8,000-15,000"
+  highlights: ["Dalai Lama temple", "Triund trek", "Tibetan culture"]
+
+kota:
+  name: "Kota Heritage Trip"
+  location: "Rajasthan"
+  difficulty: "Easy"
+  duration: "3 days"
+  best_season: ["October", "November", "December", "January", "February", "March"]
+  altitude: "271m"
+  cost_range: "₹5,000-10,000"
+  highlights: ["Garadia Mahadev", "Chambal riverfront", "Heritage sites"]

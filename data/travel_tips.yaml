@@ -1,0 +1,33 @@
+packing:
+  - category: "Clothing"
+    items: ["Thermal innerwear", "Fleece jacket", "Waterproof jacket", "Trekking pants", "Warm cap and gloves"]
+  - category: "Gear"
+    items: ["Trekking shoes", "Backpack (40-50L)", "Sleeping bag", "Trekking poles", "Headlamp"]
+  - category: "Personal"
+    items: ["Sunscreen SPF 50+", "Personal medications", "Energy bars", "Camera", "Cash"]
+
+safety:
+  - "Always trek with experienced guides"
+  - "Check weather conditions before starting"
+  - "Inform family about your itinerary"
+  - "Carry emergency contact numbers"
+  - "Consider trek insurance"
+
+seasons:
+  winter:
+    months: ["December", "January", "February", "March"]
+    temperature: "-5°C to 10°C"
+    pros: ["Snow-covered landscapes", "Clear mountain views"]
+    cons: ["Heavy winter gear needed", "Some routes closed"]
+  
+  summer:
+    months: ["April", "May", "June"]
+    temperature: "5°C to 20°C"
+    pros: ["Pleasant weather", "Rhododendron blooms"]
+    cons: ["Crowded trails", "Higher costs"]
+  
+  monsoon:
+    months: ["July", "August", "September"]
+    temperature: "10°C to 25°C"
+    pros: ["Lush green landscapes", "Fewer crowds"]
+    cons: ["Slippery trails", "Landslide risk"]

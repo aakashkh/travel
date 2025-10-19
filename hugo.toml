@@ -90,6 +90,11 @@ minify = true
     url = "search/"
     weight = 25
   [[menu.main]]
+    identifier = "destinations"
+    name = "Destinations"
+    url = "destinations/"
+    weight = 28
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "about/"

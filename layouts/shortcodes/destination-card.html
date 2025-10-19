@@ -1,0 +1,40 @@
+{{- $dest_key := .Get "destination" -}}
+{{- $dest := index .Site.Data.destinations $dest_key -}}
+
+{{- if $dest -}}
+<div class="destination-card">
+  <div class="dest-header">
+    <h3>{{ $dest.name }}</h3>
+    <span class="difficulty difficulty-{{ lower $dest.difficulty }}">{{ $dest.difficulty }}</span>
+  </div>
+  
+  <div class="dest-info">
+    <div class="dest-detail">
+      <strong>📍 Location:</strong> {{ $dest.location }}
+    </div>
+    <div class="dest-detail">
+      <strong>⏱️ Duration:</strong> {{ $dest.duration }}
+    </div>
+    <div class="dest-detail">
+      <strong>🏔️ Max Altitude:</strong> {{ $dest.altitude }}
+    </div>
+    <div class="dest-detail">
+      <strong>💰 Cost:</strong> {{ $dest.cost_range }}
+    </div>
+  </div>
+  
+  <div class="dest-highlights">
+    <strong>✨ Highlights:</strong>
+    <ul>
+      {{ range $dest.highlights }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+  
+  <div class="best-season">
+    <strong>🌤️ Best Time:</strong>
+    {{ delimit $dest.best_season ", " }}
+  </div>
+</div>
+{{- end -}}

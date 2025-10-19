@@ -1,0 +1,16 @@
+{{- $tips := .Site.Data.travel_tips -}}
+
+<div class="packing-list">
+  <h3>🎒 Essential Packing List</h3>
+  
+  {{ range $tips.packing }}
+  <div class="packing-category">
+    <h4>{{ .category }}</h4>
+    <ul>
+      {{ range .items }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</div>

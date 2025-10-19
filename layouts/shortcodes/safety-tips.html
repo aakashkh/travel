@@ -1,0 +1,10 @@
+{{- $tips := .Site.Data.travel_tips -}}
+
+<div class="safety-tips">
+  <h3>⚠️ Safety Guidelines</h3>
+  <ul class="safety-list">
+    {{ range $tips.safety }}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</div>

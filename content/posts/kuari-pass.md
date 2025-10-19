@@ -33,15 +33,19 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 
 ## Trek Overview
 
-| Feature | Kuari Pass | Chopta-Tungnath-Chandrashila |
-|---------|------------|-------------------------------|
-| **Max Altitude** | 3,676m | 4,000m (Chandrashila) |
-| **Duration** | 6 days | 3 days |
-| **Difficulty** | Easy to Moderate | Easy to Moderate |
-| **Best Time** | Oct-Apr | Oct-Apr |
-| **Starting Point** | Joshimath | Chopta |
-| **Highlights** | Lord Curzon Trail, 360° views | Highest Shiva temple, Sunrise |
-| **Trek Distance** | 22 km | 5 km (one way) |
+{{< destination-card destination="kuari_pass" >}}
+
+### Chopta-Tungnath-Chandrashila Details
+
+| Feature | Details |
+|---------|----------|
+| **Max Altitude** | 4,000m (Chandrashila) |
+| **Duration** | 3 days |
+| **Difficulty** | Easy to Moderate |
+| **Best Time** | Oct-Apr |
+| **Starting Point** | Chopta |
+| **Highlights** | Highest Shiva temple, Sunrise |
+| **Trek Distance** | 5 km (one way) |
 
 ### 📸 Photo Gallery
 
