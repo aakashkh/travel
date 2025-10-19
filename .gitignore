@@ -1,42 +1,28 @@
 # Hugo build files
-/public/
-/resources/
+public/
+resources/
 .hugo_build.lock
 
-# OS generated files
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# IDE files
+# Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Local development files
-*.bat
-*.cmd
-node_modules/
-npm-debug.log*
-
-# Environment files
-.env
-.env.local
-.env.production
-
 # Temporary files
 *.tmp
 *.temp
-*~
 
-# Image processing cache
-/assets/jsconfig.json
+# Log files
+*.log
 
-# Theme git folders (keep themes but not their git history)
-themes/*/.git/
-themes/*/.github/
+# Node modules (if using npm)
+node_modules/
+
+# Local environment files
+.env
+.env.local
