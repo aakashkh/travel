@@ -373,7 +373,19 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 4. **Masrur Rock Cut Temples** - Ancient rock-cut architecture
 5. **Kangra Fort** - Historic fort with valley views
 
-{{< gallery dir="/images/dharmshala/gallery/" >}}
+### 📸 Photo Gallery
+
+{{< slider id="dharamshala-gallery" >}}
+  <div>{{< img src="images/dharmshala/gallery/mcleod-ganj.jpg" alt="McLeod Ganj streets" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/dalai-lama-temple.jpg" alt="Dalai Lama Temple complex" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/mountain-trek.jpg" alt="Triund trek path" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/valley-view.jpg" alt="Valley views from trek" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/palampur-tea.jpg" alt="Palampur tea gardens" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/monastery.jpg" alt="Tibetan monastery" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/kareri-lake.jpg" alt="Kareri Lake region" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/sunset-view.jpg" alt="Sunset from Naddi viewpoint" >}}</div>
+  <div>{{< img src="images/dharmshala/gallery/local-market.jpg" alt="Local Tibetan market" >}}</div>
+{{< /slider >}}
 
 ## Conclusion
 

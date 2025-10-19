@@ -26,3 +26,9 @@ node_modules/
 # Local environment files
 .env
 .env.local
+
+#python
+*.py
+
+# requirements files
+requirements.txt
