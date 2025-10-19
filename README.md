@@ -161,11 +161,40 @@ Add relevant tags to your posts for better filtering.
 - **Setup:** Enable Discussions in GitHub repo settings
 - **Usage:** Add `comments: true` to post front matter
 
+## 🗂️ Data & Layout System
+
+### Using Data Files
+- **`data/destinations.yaml`** - Structured destination information
+- **`data/travel_tips.yaml`** - Packing lists, safety tips, seasonal guides
+
+### Custom Shortcodes
+```markdown
+# Display destination info from data
+{{< destination-card destination="kuari_pass" >}}
+
+# Show packing checklist
+{{< packing-list >}}
+
+# Display safety guidelines
+{{< safety-tips >}}
+
+# Responsive image with optimization
+{{< img src="images/post-name/photo.jpg" alt="Description" >}}
+```
+
+### Layout Templates
+- **`layouts/_default/destinations.html`** - All destinations page
+- **`layouts/shortcodes/`** - Reusable components
+- **`layouts/partials/`** - Page sections (search, social share, etc.)
+
 ## 🛠️ Development Workflow
 
 ```bash
 # Create new post
 hugo new posts/my-new-post.md
+
+# Add destination data
+# Edit data/destinations.yaml
 
 # Start development server
 hugo server -D
@@ -218,6 +247,28 @@ hugo --minify
 - **Touch-Friendly** - Large buttons and easy navigation
 - **Fast Loading** - Optimized images and minimal CSS/JS
 - **Offline Reading** - Print-friendly layouts
+
+## 📊 Data-Driven Features
+
+### Destination Management
+- **Centralized data** in YAML files
+- **Consistent information** across all posts
+- **Easy updates** - change once, reflect everywhere
+- **Structured display** with custom layouts
+
+### Available Shortcodes
+- **destination-card** - Shows destination details from data
+- **packing-list** - Essential items by category
+- **safety-tips** - Important safety guidelines
+- **img** - Responsive images with WebP compression
+- **slider** - Image carousel galleries
+- **social-share** - Share buttons for social media
+
+### Menu Structure
+- **Posts** - All blog entries
+- **Search** - Filter by location, difficulty, season
+- **Destinations** - Data-driven destination overview
+- **Tags** - Browse by topics
 
 ## 🌟 Future Enhancements
 
