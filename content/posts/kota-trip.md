@@ -6,7 +6,7 @@ tags: ["travel", "rajasthan", "road-trip", "kota", "temples"]
 categories: ["Travel", "Road Trip"]
 author: "Aakash Khandelwal"
 description: "A journey through Rajasthan's hidden gems, spiritual sites, and culinary delights"
-featured_image: "/travel/images/kota-trip/kota-hero.jpg"
+featured_image: "/images/kota-trip/kota-hero.jpg"
 ShowToc: true
 TocOpen: false
 comments: true
@@ -18,7 +18,7 @@ weight: 2
 keywords: ["kota travel", "rajasthan road trip", "chambal riverfront", "garadia mahadev", "kota kachori"]
 ---
 
-![Kota cityscape](/travel/images/kota-trip/kota-hero.jpg)
+![Kota cityscape](/images/kota-trip/kota-hero.jpg)
 *The beautiful city of Kota along the Chambal River*
 
 *A journey through Rajasthan's hidden gems, spiritual sites, and culinary delights*
@@ -37,7 +37,7 @@ Our adventure began bright and early as we set off from Jaipur, embarking on wha
 
 ### First Stop: Garadia Mahadev Temple - A Spiritual Marvel
 
-![Garadia Mahadev Temple](/travel/images/kota-trip/gallery/garadia-temple.jpg)
+![Garadia Mahadev Temple](/images/kota-trip/gallery/garadia-temple.jpg)
 *The ancient Garadia Mahadev Temple perched on a cliff*
 
 Our first major stop was the breathtaking **Garadia Mahadev Temple**, located about 30 kilometers from Kota city. This ancient temple, dedicated to Lord Shiva, is perched dramatically on a cliff overlooking the meandering Chambal River.
@@ -99,7 +99,7 @@ We concluded our first day at the enchanting **Seven Wonders Park**, featuring s
 
 ### Chambal Riverfront - A World-Class Heritage Experience
 
-![Chambal Riverfront](/travel/images/kota-trip/gallery/chambal-riverfront.jpg)
+![Chambal Riverfront](/images/kota-trip/gallery/chambal-riverfront.jpg)
 *The magnificent Chambal Riverfront - world's first heritage riverfront*
 
 The highlight of our second day was the **Chambal Riverfront**, proclaimed as the world's first heritage riverfront. This ₹1400 crore project stretches 6 kilometers along both sides of the Chambal River.

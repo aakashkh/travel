@@ -6,7 +6,7 @@ tags: ["kuari-pass", "chopta", "tungnath", "chandrashila", "himalayan-trek"]
 categories: ["Trekking", "Himalayas"]
 author: "Aakash Khandelwal"
 description: "Complete guide to Kuari Pass and Chopta-Tungnath-Chandrashila trek - Lord Curzon Trail with stunning Himalayan views"
-featured_image: "/travel/images/kuari-pass/kuari-hero.gif"
+featured_image: "/images/kuari-pass/kuari-hero.gif"
 featured_image_alt: "Panoramic view of snow-capped Himalayan peaks from Kuari Pass"
 ShowToc: true
 TocOpen: false
@@ -24,7 +24,7 @@ weight: 1
 keywords: ["kuari pass trek", "lord curzon trail", "tungnath temple", "chandrashila peak", "himalayan trekking", "uttarakhand treks"]
 ---
 
-![Kuari Pass panoramic view](/travel/images/kuari-pass/kuari-hero.gif)
+![Kuari Pass panoramic view](/images/kuari-pass/kuari-hero.gif)
 *The breathtaking 360° view from Kuari Pass showcasing the majestic Himalayan range*
 
 Experience the legendary **"Lord Curzon Trail"** and visit the world's highest Shiva temple in this incredible Himalayan adventure combining two spectacular treks.
@@ -47,16 +47,16 @@ Experience the legendary **"Lord Curzon Trail"** and visit the world's highest S
 
 {{< slider id="kuari-gallery" >}}
   <div>
-    <img src="/travel/images/kuari-pass/gallery/kuari-summit.jpg" alt="Summit views from Kuari Pass">
+    <img src="/images/kuari-pass/gallery/kuari-summit.jpg" alt="Summit views from Kuari Pass">
   </div>
   <div>
-    <img src="/travel/images/kuari-pass/gallery/mountain-view.jpg" alt="Panoramic mountain ranges">
+    <img src="/images/kuari-pass/gallery/mountain-view.jpg" alt="Panoramic mountain ranges">
   </div>
   <div>
-    <img src="/travel/images/kuari-pass/gallery/trek-path.jpg" alt="The scenic trekking path">
+    <img src="/images/kuari-pass/gallery/trek-path.jpg" alt="The scenic trekking path">
   </div>
   <div>
-    <img src="/travel/images/kuari-pass/gallery/sunrise.jpg" alt="Beautiful sunrise in the mountains">
+    <img src="/images/kuari-pass/gallery/sunrise.jpg" alt="Beautiful sunrise in the mountains">
   </div>
 {{< /slider >}}
 

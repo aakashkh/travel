@@ -6,7 +6,7 @@ tags: ["dharamshala", "mcleod-ganj", "palampur", "kareri", "himachal", "dalai-la
 categories: ["Hill Station", "Cultural"]
 author: "Aakash Khandelwal"
 description: "Chasing the Mountain Air - A whirlwind trip from Gurgaon to Dharamshala and beyond, exploring the spiritual heart of Himachal Pradesh"
-featured_image: "/travel/images/dharmshala/dharamshala-hero.jpg"
+featured_image: "/images/dharmshala/dharamshala-hero.jpg"
 ShowToc: true
 TocOpen: false
 comments: true
@@ -18,7 +18,7 @@ weight: 3
 keywords: ["dharamshala travel", "mcleod ganj", "dalai lama", "triund trek", "himachal pradesh", "tibetan culture"]
 ---
 
-![Dharamshala mountain view](/travel/images/dharmshala/dharamshala-hero.jpg)
+![Dharamshala mountain view](/images/dharmshala/dharamshala-hero.jpg)
 *The serene beauty of Dharamshala nestled in the Dhauladhar mountains*
 
 Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural beauty of Dharamshala, the Dalai Lama's residence and gateway to incredible Himalayan adventures.
@@ -112,7 +112,7 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 
 ### McLeod Ganj (Upper Dharamshala)
 
-![McLeod Ganj](/travel/images/dharmshala/gallery/mcleod-ganj.jpg)
+![McLeod Ganj](/images/dharmshala/gallery/mcleod-ganj.jpg)
 *The vibrant streets of McLeod Ganj - Little Lhasa*
 
 **Tsuglagkhang Complex**
@@ -121,7 +121,7 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 - Tibet Museum with artifacts
 - Prayer wheels and stupas
 
-![Dalai Lama Temple](/travel/images/dharmshala/gallery/dalai-lama-temple.jpg)
+![Dalai Lama Temple](/images/dharmshala/gallery/dalai-lama-temple.jpg)
 *The peaceful Dalai Lama Temple complex*
 
 **Bhagsu Area**
