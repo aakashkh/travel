@@ -2,6 +2,7 @@ baseURL = 'https://aakashkh.github.io/travel/'
 languageCode = 'en-us'
 title = 'Travel'
 theme = 'pehtheme'
+relativeURLs = true
 
 summaryLength = '20' # <- 20 words are approximately 160 characters
 googleAnalytics = 'G-MEASUREMENT_ID' # <- Your GA-4
