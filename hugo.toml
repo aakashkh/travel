@@ -1,4 +1,4 @@
-baseURL = 'https://pehtheme-hugo.netlify.app/'
+baseURL = 'https://aakashkh.github.io/travel/'
 languageCode = 'en-us'
 title = 'Travel'
 theme = 'pehtheme'
