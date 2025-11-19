@@ -1,0 +1,888 @@
+{{ define "main" }}
+{{- partial "content/breadcrumb.html" . -}}
+
+<div class="gallery-page">
+  <header class="gallery-header text-center mb-12">
+    <h1 class="text-5xl font-bold mb-4">{{ .Title }}</h1>
+    <p class="text-xl text-gray-600">{{ .Description }}</p>
+  </header>
+
+  <div class="destinations-grid">
+    <!-- Udaipur -->
+    {{- $udaipurImages := resources.Match "images/udaipur/*" -}}
+    {{- if $udaipurImages -}}
+      {{- $heroImage := "" -}}
+      {{- $galleryImages := slice -}}
+      {{- range $udaipurImages -}}
+        {{- if (strings.Contains .Name "hero") -}}
+          {{- $heroImage = .RelPermalink -}}
+        {{- else -}}
+          {{- $galleryImages = $galleryImages | append .RelPermalink -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $heroImage -}}
+        <div class="destination-tile" data-destination="udaipur" data-images="{{ delimit $galleryImages "," }}">
+          <div class="tile-image">
+            <img src="{{ $heroImage }}" alt="Udaipur">
+          </div>
+          <div class="tile-overlay">
+            <h3>Udaipur</h3>
+            <p>{{ len $galleryImages }} photos</p>
+            <span class="view-gallery">View Gallery</span>
+          </div>
+        </div>
+      {{- end -}}
+    {{- end -}}
+
+    <!-- Dharmshala -->
+    {{- $dharmshalaImages := resources.Match "images/dharmshala/*" -}}
+    {{- if $dharmshalaImages -}}
+      {{- $heroImage := "" -}}
+      {{- $galleryImages := slice -}}
+      {{- range $dharmshalaImages -}}
+        {{- if (strings.Contains .Name "hero") -}}
+          {{- $heroImage = .RelPermalink -}}
+        {{- else -}}
+          {{- $galleryImages = $galleryImages | append .RelPermalink -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $heroImage -}}
+        <div class="destination-tile" data-destination="dharmshala" data-images="{{ delimit $galleryImages "," }}">
+          <div class="tile-image">
+            <img src="{{ $heroImage }}" alt="Dharmshala">
+          </div>
+          <div class="tile-overlay">
+            <h3>Dharmshala</h3>
+            <p>{{ len $galleryImages }} photos</p>
+            <span class="view-gallery">View Gallery</span>
+          </div>
+        </div>
+      {{- end -}}
+    {{- end -}}
+
+    <!-- Kuari Pass -->
+    {{- $kuariImages := resources.Match "images/kuari-pass/*" -}}
+    {{- if $kuariImages -}}
+      {{- $heroImage := "" -}}
+      {{- $galleryImages := slice -}}
+      {{- range $kuariImages -}}
+        {{- if (strings.Contains .Name "hero") -}}
+          {{- $heroImage = .RelPermalink -}}
+        {{- else -}}
+          {{- $galleryImages = $galleryImages | append .RelPermalink -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $heroImage -}}
+        <div class="destination-tile" data-destination="kuari-pass" data-images="{{ delimit $galleryImages "," }}">
+          <div class="tile-image">
+            <img src="{{ $heroImage }}" alt="Kuari Pass">
+          </div>
+          <div class="tile-overlay">
+            <h3>Kuari Pass</h3>
+            <p>{{ len $galleryImages }} photos</p>
+            <span class="view-gallery">View Gallery</span>
+          </div>
+        </div>
+      {{- end -}}
+    {{- end -}}
+
+    <!-- Rishikesh -->
+    {{- $rishikeshImages := resources.Match "images/rishikesh-haridwar/*" -}}
+    {{- if $rishikeshImages -}}
+      {{- $heroImage := "" -}}
+      {{- $galleryImages := slice -}}
+      {{- range $rishikeshImages -}}
+        {{- if (strings.Contains .Name "hero") -}}
+          {{- $heroImage = .RelPermalink -}}
+        {{- else -}}
+          {{- $galleryImages = $galleryImages | append .RelPermalink -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $heroImage -}}
+        <div class="destination-tile" data-destination="rishikesh" data-images="{{ delimit $galleryImages "," }}">
+          <div class="tile-image">
+            <img src="{{ $heroImage }}" alt="Rishikesh">
+          </div>
+          <div class="tile-overlay">
+            <h3>Rishikesh</h3>
+            <p>{{ len $galleryImages }} photos</p>
+            <span class="view-gallery">View Gallery</span>
+          </div>
+        </div>
+      {{- end -}}
+    {{- end -}}
+  </div>
+
+  <!-- Gallery Modal -->
+  <div class="gallery-modal" id="galleryModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title"></h2>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-content">
+        <div class="gallery-wrapper" id="galleryWrapper"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.gallery-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.gallery-header {
+  margin-bottom: 4rem;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.destination-tile {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.destination-tile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.destination-tile:hover .tile-image img {
+  transform: scale(1.1);
+}
+
+.tile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 2rem 2rem 3rem;
+  text-align: center;
+}
+
+.tile-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.tile-overlay p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0 0 1rem 0;
+}
+
+.view-gallery {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.destination-tile:hover .view-gallery {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal.active {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.modal-container {
+  position: relative;
+  width: 95vw;
+  height: 90vh;
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #ccc;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+
+
+.modal-content {
+  height: calc(100% - 60px);
+  overflow: hidden;
+}
+
+.gallery-wrapper {
+  height: 100%;
+  padding: 0.5rem 2rem;
+}
+
+/* Gallery Styles */
+.drag-gallery {
+  position: relative;
+  height: 100%;
+}
+
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0;
+  cursor: grab;
+  height: 100%;
+}
+
+.gallery-container:active {
+  cursor: grabbing;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-card {
+  flex: 0 0 320px;
+  height: 450px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-card:hover .card-inner {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.gallery-card:hover .card-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  pointer-events: all;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.zoom-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .zoom-icon {
+  transform: scale(1);
+}
+
+.zoom-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.zoom-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Lightbox Styles */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 10;
+}
+
+
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 11;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav.prev {
+  left: -70px;
+}
+
+.lightbox-nav.next {
+  right: -70px;
+}
+
+.lightbox-nav svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  color: white;
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding: 1rem;
+  }
+  
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .destination-tile {
+    height: 250px;
+  }
+  
+  .modal-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tiles = document.querySelectorAll('.destination-tile');
+  const modal = document.getElementById('galleryModal');
+  const modalTitle = document.querySelector('.modal-title');
+  const modalClose = document.querySelector('.modal-close');
+  const modalBackdrop = document.querySelector('.modal-backdrop');
+  const galleryWrapper = document.getElementById('galleryWrapper');
+
+  function createGallery(destination, images) {
+    const galleryId = `modal-gallery-${destination}`;
+    
+    let galleryHTML = `
+      <div class="drag-gallery" id="${galleryId}">
+        <div class="gallery-container">
+          <div class="gallery-track" id="track-${destination}">
+    `;
+
+    images.forEach((image, index) => {
+      galleryHTML += `
+        <div class="gallery-card" data-index="${index}">
+          <div class="card-inner">
+            <img src="${image}" alt="${destination} image ${index + 1}" loading="lazy">
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <div class="zoom-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+                <span class="zoom-text">View Full Size</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    galleryHTML += `
+          </div>
+        </div>
+        
+        <div class="lightbox-modal" id="lightbox-${destination}">
+          <div class="lightbox-backdrop"></div>
+          <div class="lightbox-container">
+
+            
+            <button class="lightbox-nav prev" aria-label="Previous image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="15,18 9,12 15,6"></polyline>
+              </svg>
+            </button>
+            
+            <button class="lightbox-nav next" aria-label="Next image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="9,18 15,12 9,6"></polyline>
+              </svg>
+            </button>
+            
+            <div class="lightbox-content">
+              <img class="lightbox-image" src="" alt="">
+            </div>
+            
+            <div class="lightbox-counter">
+              <span class="current">1</span> / <span class="total">${images.length}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    return galleryHTML;
+  }
+
+  function openModal(destination, title, images) {
+    modalTitle.textContent = title;
+    galleryWrapper.innerHTML = createGallery(destination, images);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    setTimeout(() => initModalGallery(destination, images), 100);
+  }
+  
+  function initModalGallery(destination, images) {
+    const galleryEl = document.getElementById(`modal-gallery-${destination}`);
+    const track = document.getElementById(`track-${destination}`);
+    const container = galleryEl.querySelector('.gallery-container');
+    const cards = galleryEl.querySelectorAll('.gallery-card');
+    const lightbox = document.getElementById(`lightbox-${destination}`);
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxPrev = lightbox.querySelector('.lightbox-nav.prev');
+    const lightboxNext = lightbox.querySelector('.lightbox-nav.next');
+    const lightboxBackdrop = lightbox.querySelector('.lightbox-backdrop');
+    const currentCounter = lightbox.querySelector('.current');
+    
+    let currentIndex = 0;
+    let isAnimating = false;
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let lastX = 0;
+    let velocity = 0;
+    let amplitude = 0;
+    let frame = 0;
+    let timestamp = 0;
+    let ticker = 0;
+    let dragDistance = 0;
+    let offset = 0;
+    let target = 0;
+    
+    const containerWidth = container.offsetWidth;
+    const trackWidth = track.scrollWidth;
+    const maxOffset = Math.min(0, containerWidth - trackWidth);
+    
+    function track_momentum() {
+      const now = Date.now();
+      const elapsed = now - timestamp;
+      timestamp = now;
+      const delta = offset - frame;
+      frame = offset;
+      
+      const v = 1000 * delta / (1 + elapsed);
+      velocity = 0.8 * v + 0.2 * velocity;
+    }
+    
+    function auto_scroll() {
+      if (amplitude) {
+        const elapsed = Date.now() - timestamp;
+        const delta = -amplitude * Math.exp(-elapsed / 325);
+        if (delta > 0.5 || delta < -0.5) {
+          scroll_to(target + delta);
+          requestAnimationFrame(auto_scroll);
+        } else {
+          scroll_to(target);
+        }
+      }
+    }
+    
+    function scroll_to(x) {
+      offset = Math.max(maxOffset, Math.min(0, x));
+      track.style.transform = `translateX(${offset}px)`;
+    }
+    
+    function handleStart(e) {
+      isDragging = true;
+      dragDistance = 0;
+      
+      const clientX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+      startX = clientX;
+      lastX = clientX;
+      
+      velocity = amplitude = 0;
+      frame = offset;
+      timestamp = Date.now();
+      clearInterval(ticker);
+      ticker = setInterval(track_momentum, 100);
+      
+      track.style.transition = 'none';
+      container.style.cursor = 'grabbing';
+      
+      e.preventDefault();
+    }
+    
+    function handleMove(e) {
+      if (!isDragging) return;
+      
+      const clientX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+      dragDistance = Math.abs(clientX - startX);
+      
+      const delta = lastX - clientX;
+      lastX = clientX;
+      
+      scroll_to(offset - delta);
+      
+      e.preventDefault();
+    }
+    
+    function handleEnd() {
+      if (!isDragging) return;
+      
+      isDragging = false;
+      container.style.cursor = 'grab';
+      
+      clearInterval(ticker);
+      
+      if (velocity > 10 || velocity < -10) {
+        amplitude = 0.8 * velocity;
+        target = offset + amplitude;
+        target = Math.max(maxOffset, Math.min(0, target));
+        timestamp = Date.now();
+        requestAnimationFrame(auto_scroll);
+      } else {
+        track.style.transition = 'transform 0.3s ease-out';
+        scroll_to(Math.max(maxOffset, Math.min(0, offset)));
+      }
+      
+      setTimeout(() => {
+        dragDistance = 0;
+      }, 100);
+    }
+    
+    function openLightbox(index) {
+      if (isAnimating || isDragging) return;
+      
+      currentIndex = index;
+      lightboxImage.src = images[currentIndex];
+      currentCounter.textContent = currentIndex + 1;
+      
+      lightbox.classList.add('active');
+    }
+    
+    function closeLightbox() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      lightbox.classList.remove('active');
+      
+      setTimeout(() => {
+        isAnimating = false;
+      }, 300);
+    }
+    
+    function showNext() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      lightboxImage.style.transform = 'scale(0.8)';
+      lightboxImage.style.opacity = '0';
+      
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImage.src = images[currentIndex];
+        currentCounter.textContent = currentIndex + 1;
+        
+        lightboxImage.style.transform = 'scale(1)';
+        lightboxImage.style.opacity = '1';
+        isAnimating = false;
+      }, 150);
+    }
+    
+    function showPrev() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      lightboxImage.style.transform = 'scale(0.8)';
+      lightboxImage.style.opacity = '0';
+      
+      setTimeout(() => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImage.src = images[currentIndex];
+        currentCounter.textContent = currentIndex + 1;
+        
+        lightboxImage.style.transform = 'scale(1)';
+        lightboxImage.style.opacity = '1';
+        isAnimating = false;
+      }, 150);
+    }
+    
+    container.addEventListener('mousedown', handleStart);
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleEnd);
+    container.addEventListener('touchstart', handleStart, { passive: false });
+    window.addEventListener('touchmove', handleMove, { passive: false });
+    window.addEventListener('touchend', handleEnd);
+    
+    cards.forEach((card, index) => {
+      card.addEventListener('click', (e) => {
+        if (!isDragging && dragDistance < 5) {
+          openLightbox(index);
+        }
+      });
+    });
+    
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPrev);
+    lightboxNext.addEventListener('click', showNext);
+    
+    container.addEventListener('contextmenu', (e) => e.preventDefault());
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (modal.classList.contains('active')) {
+        if (lightbox.classList.contains('active')) {
+          // Lightbox navigation
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            showPrev();
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            showNext();
+          }
+        } else {
+          // Gallery scrolling
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const scrollAmount = 320 + 24; // card width + gap
+            scroll_to(offset + scrollAmount);
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const scrollAmount = 320 + 24; // card width + gap
+            scroll_to(offset - scrollAmount);
+          }
+        }
+      }
+    });
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    galleryWrapper.innerHTML = '';
+  }
+
+  tiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+      const destination = tile.dataset.destination;
+      const title = tile.querySelector('h3').textContent;
+      const images = tile.dataset.images.split(',');
+      openModal(destination, title, images);
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
+</script>
+
+{{ end }}
