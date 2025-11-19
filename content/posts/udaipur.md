@@ -45,17 +45,16 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 
 **Afternoon: Check-in & City Palace**
 
-![Udaipur City Palace entrance](/images/udaipur/IMG_20230930_161423514.jpg)
-*The grand entrance to the magnificent City Palace complex*
+{{< carousel "day1-palace" >}}
+images/udaipur/IMG_20230930_161423514.jpg|The grand entrance to the magnificent City Palace complex
+images/udaipur/IMG_20230930_161944739.jpg|Exquisite interiors showcasing royal Rajasthani craftsmanship
+{{< /carousel >}}
 
 **City Palace Complex (4:00 PM - 6:00 PM)**
 - Largest palace complex in Rajasthan
 - Stunning architecture with intricate mirror work
 - Panoramic views of Lake Pichola
 - Crystal Gallery and vintage car collection
-
-![City Palace interiors](/images/udaipur/IMG_20230930_161944739.jpg)
-*Exquisite interiors showcasing royal Rajasthani craftsmanship*
 
 | Palace Highlights | Details |
 |------------------|---------|
@@ -66,8 +65,11 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 
 **Evening: Jagdish Temple & Gangaur Ghat**
 
-![Jagdish Temple](/images/udaipur/IMG_20230930_183401.jpg)
-*The ancient Jagdish Temple dedicated to Lord Vishnu*
+{{< carousel "day1-evening" >}}
+images/udaipur/IMG_20230930_183401.jpg|The ancient Jagdish Temple dedicated to Lord Vishnu
+images/udaipur/IMG_20230930_184553807.jpg|Peaceful evening at Gangaur Ghat with Lake Pichola views
+images/udaipur/IMG_20230930_192913893.jpg|Serene evening reflections on Lake Pichola
+{{< /carousel >}}
 
 **Jagdish Temple (6:30 PM)**
 - 400-year-old temple dedicated to Lord Vishnu
@@ -76,17 +78,10 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 - Located near City Palace
 
 **Gangaur Ghat (7:30 PM)**
-
-![Gangaur Ghat evening](/images/udaipur/IMG_20230930_184553807.jpg)
-*Peaceful evening at Gangaur Ghat with Lake Pichola views*
-
 - Picturesque ghat on Lake Pichola
 - Perfect sunset viewing spot
 - Traditional boat rides available
 - Street food and local vendors
-
-![Evening lake view](/images/udaipur/IMG_20230930_192913893.jpg)
-*Serene evening reflections on Lake Pichola*
 
 ---
 
@@ -101,13 +96,16 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 - One of the most important Krishna temples
 - Intricate Pichwai paintings
 
-![Nathdwara temple](/images/udaipur/PXL_20231001_144609572.NIGHT.jpg)
-*The sacred Shrinathji Temple at Nathdwara*
+{{< carousel "day2-nathdwara" >}}
+images/udaipur/PXL_20231001_144609572.NIGHT.jpg|The sacred Shrinathji Temple at Nathdwara
+images/udaipur/IMG_20231001_161526603.jpg|The scenic Bagheri Ka Naka waterfall surrounded by lush greenery
+{{< /carousel >}}
 
 **Afternoon: Bagheri Ka Naka Waterfall**
-
-![Bagheri waterfall](/images/udaipur/IMG_20231001_161526603.jpg)
-*The scenic Bagheri Ka Naka waterfall surrounded by lush greenery*
+- Hidden gem near Nathdwara
+- Seasonal waterfall (best during/after monsoon)
+- Natural swimming pool
+- Perfect for photography and relaxation
 
 - Hidden gem near Nathdwara
 - Seasonal waterfall (best during/after monsoon)
@@ -135,8 +133,11 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 
 **Morning: Fatehsagar Lake Aquarium (10:00 AM)**
 
-![Fatehsagar Lake morning](/images/udaipur/IMG_20231002_180700.jpg)
-*Morning serenity at Fatehsagar Lake*
+{{< carousel "day3-fatehsagar" >}}
+images/udaipur/IMG_20231002_180700.jpg|Morning serenity at Fatehsagar Lake
+images/udaipur/IMG_20231002_185525.jpg|Enjoying a peaceful boat ride on Fatehsagar Lake
+images/udaipur/IMG_20231002_190145227.jpg|Golden hour reflections on Fatehsagar Lake
+{{< /carousel >}}
 
 **Under the Sun Aquarium**
 - Located on Fatehsagar Lake island
@@ -151,20 +152,18 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 - Must-try dal baati churma
 
 **Afternoon: Fatehsagar Lake Activities**
-
-![Fatehsagar boat ride](/images/udaipur/IMG_20231002_185525.jpg)
-*Enjoying a peaceful boat ride on Fatehsagar Lake*
-
 **Boat Riding (3:00 PM - 5:00 PM)**
 - Pedal boats and motor boats available
 - Visit Nehru Park island
 - Stunning lake and city views
 - Photography opportunities
 
-![Lake sunset views](/images/udaipur/IMG_20231002_190145227.jpg)
-*Golden hour reflections on Fatehsagar Lake*
-
 **Evening: Lakeside Walk & Ambrai Ghat**
+
+{{< carousel "day3-evening" >}}
+images/udaipur/IMG_20231002_192709.jpg|The iconic Ambrai Ghat with City Palace backdrop
+images/udaipur/IMG_20231002_193654762.jpg|Beautifully illuminated temples reflecting in the lake
+{{< /carousel >}}
 
 **Fatehsagar Promenade Walk (5:30 PM)**
 - 4 km lakeside walking path
@@ -172,17 +171,11 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 - Beautiful sunset views
 - Cool evening atmosphere
 
-![Ambrai Ghat evening](/images/udaipur/IMG_20231002_192709.jpg)
-*The iconic Ambrai Ghat with City Palace backdrop*
-
 **Ambrai Ghat (7:00 PM - 9:00 PM)**
 - Most photogenic spot in Udaipur
 - Perfect City Palace views
 - Romantic dinner restaurants
 - Night photography paradise
-
-![Night temple views](/images/udaipur/IMG_20231002_193654762.jpg)
-*Beautifully illuminated temples reflecting in the lake*
 
 **Night Temple & Street Exploration**
 - Local temple visits
@@ -201,29 +194,7 @@ Discover the enchanting "City of Lakes" where royal heritage meets natural beaut
 - Board overnight train to Jaipur
 - Arrival in Jaipur next morning
 
-## 📸 Photo Gallery
 
-![City Palace entrance](/images/udaipur/IMG_20230930_161423514.jpg)
-
-![Palace interiors](/images/udaipur/IMG_20230930_161944739.jpg)
-
-![Jagdish Temple](/images/udaipur/IMG_20230930_183401.jpg)
-
-![Gangaur Ghat](/images/udaipur/IMG_20230930_184553807.jpg)
-
-![Nathdwara temple](/images/udaipur/PXL_20231001_144609572.NIGHT.jpg)
-
-![Bagheri waterfall](/images/udaipur/IMG_20231001_161526603.jpg)
-
-![Fatehsagar morning](/images/udaipur/IMG_20231002_180700.jpg)
-
-![Boat ride](/images/udaipur/IMG_20231002_185525.jpg)
-
-![Lake sunset](/images/udaipur/IMG_20231002_190145227.jpg)
-
-![Ambrai Ghat](/images/udaipur/IMG_20231002_192709.jpg)
-
-![Night temple](/images/udaipur/IMG_20231002_193654762.jpg)
 
 ## Key Attractions
 
@@ -418,4 +389,3 @@ From the grandeur of City Palace to the tranquility of lake boat rides, from the
 
 ---
 
-**#Udaipur #CityOfLakes #Rajasthan #RoyalHeritage #FatehsagarLake #CityPalace #Nathdwara #AmbraiGhat**

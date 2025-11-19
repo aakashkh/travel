@@ -1,0 +1,667 @@
+{{- $id := .Get 0 -}}
+{{- $content := .Inner | strings.TrimSpace -}}
+{{- $images := split $content "\n" -}}
+
+<div class="drag-gallery mb-8" id="gallery-{{ $id }}">
+  <div class="gallery-header">
+    <h3 class="gallery-title">Photo Gallery</h3>
+    <p class="gallery-subtitle">Drag to explore • Click to view full size</p>
+  </div>
+  
+  <div class="gallery-container">
+    <div class="gallery-track" id="track-{{ $id }}">
+      {{- range $index, $line := $images -}}
+        {{- $imagePath := $line | strings.TrimSpace | strings.TrimSuffix "\r" -}}
+        {{- if $imagePath -}}
+          <div class="gallery-card" data-index="{{ $index }}">
+            <div class="card-inner">
+              {{- with resources.Get $imagePath -}}
+                {{- $thumb := .Resize "400x300" -}}
+                <img src="{{ $thumb.Permalink }}" alt="Gallery image {{ add $index 1 }}" loading="lazy">
+              {{- end -}}
+              <div class="card-overlay">
+                <div class="overlay-content">
+                  <div class="zoom-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35"></path>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                  </div>
+                  <span class="zoom-text">View Full Size</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{- end -}}
+      {{- end -}}
+    </div>
+  </div>
+  
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-{{ $id }}">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" aria-label="Close lightbox">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <button class="lightbox-nav prev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+      </button>
+      
+      <button class="lightbox-nav next" aria-label="Next image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+      </button>
+      
+      <div class="lightbox-content">
+        <img class="lightbox-image" src="" alt="">
+      </div>
+      
+      <div class="lightbox-counter">
+        <span class="current">1</span> / <span class="total">{{ len $images }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.drag-gallery {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.gallery-subtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0;
+  cursor: grab;
+}
+
+.gallery-container:active {
+  cursor: grabbing;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.gallery-card {
+  flex: 0 0 280px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .gallery-card {
+    flex: 0 0 320px;
+    height: 240px;
+  }
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.gallery-card:hover .card-inner {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.gallery-card:hover .card-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  pointer-events: all;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.zoom-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.gallery-card:hover .zoom-icon {
+  transform: scale(1);
+}
+
+.zoom-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.zoom-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* Lightbox Styles */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 10;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 11;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.lightbox-close svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  color: white;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 11;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav.prev {
+  left: -70px;
+}
+
+.lightbox-nav.next {
+  right: -70px;
+}
+
+.lightbox-nav svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  color: white;
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .gallery-track {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .gallery-card {
+    flex: 0 0 240px;
+    height: 180px;
+  }
+  
+  .lightbox-close {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .lightbox-nav {
+    display: none;
+  }
+  
+  .lightbox-counter {
+    bottom: 20px;
+  }
+}
+
+/* Scroll indicators */
+.gallery-container::before,
+.gallery-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.gallery-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.8), transparent);
+}
+
+/* Animation for cards */
+.gallery-card {
+  animation: slideInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gallery-card:nth-child(1) { animation-delay: 0.1s; }
+.gallery-card:nth-child(2) { animation-delay: 0.2s; }
+.gallery-card:nth-child(3) { animation-delay: 0.3s; }
+.gallery-card:nth-child(4) { animation-delay: 0.4s; }
+.gallery-card:nth-child(5) { animation-delay: 0.5s; }
+.gallery-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<script>
+(function() {
+  function initDragGallery() {
+    const gallery = document.getElementById('gallery-{{ $id }}');
+    if (!gallery) {
+      setTimeout(initDragGallery, 100);
+      return;
+    }
+
+    const track = document.getElementById('track-{{ $id }}');
+    const container = gallery.querySelector('.gallery-container');
+    const cards = gallery.querySelectorAll('.gallery-card');
+    const lightbox = document.getElementById('lightbox-{{ $id }}');
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const lightboxPrev = lightbox.querySelector('.lightbox-nav.prev');
+    const lightboxNext = lightbox.querySelector('.lightbox-nav.next');
+    const lightboxBackdrop = lightbox.querySelector('.lightbox-backdrop');
+    const currentCounter = lightbox.querySelector('.current');
+    const totalCounter = lightbox.querySelector('.total');
+
+    const images = [
+      {{- range $index, $line := $images -}}
+        {{- $imagePath := $line | strings.TrimSpace | strings.TrimSuffix "\r" -}}
+        {{- if $imagePath -}}
+          {{- with resources.Get $imagePath -}}
+            {{- $full := .Resize "1600x" -}}
+            "{{ $full.Permalink }}",
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    ];
+
+    let currentIndex = 0;
+    let isAnimating = false;
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let initialTransform = 0;
+    let dragDistance = 0;
+
+    // Drag functionality
+    function handleStart(e) {
+      isDragging = false; // Start as false, will become true on move
+      startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+      currentX = startX;
+      dragDistance = 0;
+      
+      const transform = window.getComputedStyle(track).transform;
+      if (transform !== 'none') {
+        const matrix = new DOMMatrix(transform);
+        initialTransform = matrix.m41;
+      } else {
+        initialTransform = 0;
+      }
+    }
+
+    function handleMove(e) {
+      currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+      dragDistance = Math.abs(currentX - startX);
+      
+      // Only start dragging if moved more than 5px
+      if (dragDistance > 5 && !isDragging) {
+        isDragging = true;
+        track.style.transition = 'none';
+        container.style.cursor = 'grabbing';
+      }
+      
+      if (!isDragging) return;
+      
+      e.preventDefault();
+      const deltaX = currentX - startX;
+      const newTransform = initialTransform + deltaX;
+      
+      track.style.transform = `translateX(${newTransform}px)`;
+    }
+
+    function handleEnd() {
+      if (isDragging) {
+        const deltaX = currentX - startX;
+        const threshold = 50;
+        
+        track.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        container.style.cursor = 'grab';
+        
+        // Snap back or continue scroll based on momentum
+        if (Math.abs(deltaX) > threshold) {
+          const containerWidth = container.offsetWidth;
+          const trackWidth = track.scrollWidth;
+          const maxTransform = -(trackWidth - containerWidth);
+          
+          let newTransform = initialTransform + deltaX;
+          newTransform = Math.max(maxTransform, Math.min(0, newTransform));
+          
+          track.style.transform = `translateX(${newTransform}px)`;
+        } else {
+          track.style.transform = `translateX(${initialTransform}px)`;
+        }
+      }
+      
+      // Reset drag state after a short delay to allow click detection
+      setTimeout(() => {
+        isDragging = false;
+        dragDistance = 0;
+      }, 10);
+    }
+
+    // Mouse events
+    container.addEventListener('mousedown', handleStart);
+    document.addEventListener('mousemove', handleMove);
+    document.addEventListener('mouseup', handleEnd);
+
+    // Touch events
+    container.addEventListener('touchstart', handleStart, { passive: false });
+    document.addEventListener('touchmove', handleMove, { passive: false });
+    document.addEventListener('touchend', handleEnd);
+
+    // Lightbox functionality
+    function openLightbox(index) {
+      if (isAnimating || isDragging) return;
+      
+      currentIndex = index;
+      lightboxImage.src = images[currentIndex];
+      currentCounter.textContent = currentIndex + 1;
+      
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      lightbox.classList.remove('active');
+      
+      setTimeout(() => {
+        document.body.style.overflow = '';
+        isAnimating = false;
+      }, 300);
+    }
+
+    function showNext() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      lightboxImage.style.transform = 'scale(0.8)';
+      lightboxImage.style.opacity = '0';
+      
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImage.src = images[currentIndex];
+        currentCounter.textContent = currentIndex + 1;
+        
+        lightboxImage.style.transform = 'scale(1)';
+        lightboxImage.style.opacity = '1';
+        isAnimating = false;
+      }, 150);
+    }
+
+    function showPrev() {
+      if (isAnimating) return;
+      
+      isAnimating = true;
+      lightboxImage.style.transform = 'scale(0.8)';
+      lightboxImage.style.opacity = '0';
+      
+      setTimeout(() => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImage.src = images[currentIndex];
+        currentCounter.textContent = currentIndex + 1;
+        
+        lightboxImage.style.transform = 'scale(1)';
+        lightboxImage.style.opacity = '1';
+        isAnimating = false;
+      }, 150);
+    }
+
+    // Event listeners for lightbox
+    cards.forEach((card, index) => {
+      const overlay = card.querySelector('.card-overlay');
+      const overlayContent = card.querySelector('.overlay-content');
+      
+      // Handle clicks on the entire card
+      card.addEventListener('click', (e) => {
+        if (!isDragging && dragDistance < 5) {
+          openLightbox(index);
+        }
+      });
+      
+      // Handle clicks specifically on overlay content
+      if (overlayContent) {
+        overlayContent.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (!isDragging) {
+            openLightbox(index);
+          }
+        });
+      }
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPrev);
+    lightboxNext.addEventListener('click', showNext);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('active')) {
+        switch(e.key) {
+          case 'Escape':
+            closeLightbox();
+            break;
+          case 'ArrowRight':
+            showNext();
+            break;
+          case 'ArrowLeft':
+            showPrev();
+            break;
+        }
+      }
+    });
+
+    // Set total counter
+    totalCounter.textContent = images.length;
+
+    // Prevent context menu on long press
+    container.addEventListener('contextmenu', (e) => e.preventDefault());
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDragGallery);
+  } else {
+    initDragGallery();
+  }
+})();
+</script>
