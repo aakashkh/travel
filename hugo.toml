@@ -36,13 +36,9 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 		pageRef = '/gallery'
 		weight = 20
 	[[menu.main]]
-		name = 'Tags'
-		pageRef = '/tags'
+		name = 'Categories'
+		pageRef = '/categories'
 		weight = 25
-	[[menu.main]]
-		name = 'Taxonomy'
-		pageRef = '/tags/space/'
-		weight = 30
 
 [module]
   [module.hugoVersion]
