@@ -346,11 +346,10 @@
   display: flex;
   gap: 1.5rem;
   padding: 0 2rem;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
   height: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .gallery-card {
@@ -689,9 +688,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let offset = 0;
     let target = 0;
     
-    const containerWidth = container.offsetWidth;
-    const trackWidth = track.scrollWidth;
-    const maxOffset = Math.min(0, containerWidth - trackWidth);
+    // Initialize position to show first image
+    offset = 0;
+    track.style.transform = `translateX(0px)`;
+    
+    function updateBounds() {
+      const containerWidth = container.offsetWidth;
+      const trackWidth = track.scrollWidth;
+      return {
+        minOffset: Math.min(0, containerWidth - trackWidth),
+        maxOffset: 0
+      };
+    }
     
     function track_momentum() {
       const now = Date.now();
@@ -718,7 +726,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function scroll_to(x) {
-      offset = Math.max(maxOffset, Math.min(0, x));
+      const bounds = updateBounds();
+      offset = Math.max(bounds.minOffset, Math.min(bounds.maxOffset, x));
       track.style.transform = `translateX(${offset}px)`;
     }
     
@@ -748,10 +757,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const clientX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
       dragDistance = Math.abs(clientX - startX);
       
-      const delta = lastX - clientX;
+      const delta = clientX - lastX;
       lastX = clientX;
       
-      scroll_to(offset - delta);
+      scroll_to(offset + delta);
       
       e.preventDefault();
     }
@@ -767,12 +776,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (velocity > 10 || velocity < -10) {
         amplitude = 0.8 * velocity;
         target = offset + amplitude;
-        target = Math.max(maxOffset, Math.min(0, target));
+        const bounds = updateBounds();
+        target = Math.max(bounds.minOffset, Math.min(bounds.maxOffset, target));
         timestamp = Date.now();
         requestAnimationFrame(auto_scroll);
       } else {
         track.style.transition = 'transform 0.3s ease-out';
-        scroll_to(Math.max(maxOffset, Math.min(0, offset)));
+        const bounds = updateBounds();
+        scroll_to(Math.max(bounds.minOffset, Math.min(bounds.maxOffset, offset)));
       }
       
       setTimeout(() => {

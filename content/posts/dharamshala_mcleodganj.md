@@ -3,7 +3,7 @@ title: "Dharamshala - McLeod Ganj - Palampur - Kareri Complete Itinerary"
 date: 2025-01-09T18:05:00+05:30
 slug: /dharamshala-mcleod-ganj-palampur-kareri-complete-itinerary
 description: "Chasing the Mountain Air - A whirlwind trip from Gurgaon to Dharamshala and beyond, exploring the spiritual heart of Himachal Pradesh"
-image: /images/dharmshala/dharamshala-hero.jpg
+image: /images/dharmshala/dharamshala-hero.webp
 caption: "Scenic view of Dharamshala with Dhauladhar mountains"
 categories:
   - Hill Station
@@ -19,7 +19,7 @@ tags:
 draft: false
 ---
 
-![Dharamshala mountain view](/images/dharmshala/dharamshala-hero.jpg)
+![Dharamshala mountain view](/images/dharmshala/dharamshala-hero.webp)
 *The serene beauty of Dharamshala nestled in the Dhauladhar mountains*
 
 Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural beauty of Dharamshala, the Dalai Lama's residence and gateway to incredible Himalayan adventures.
@@ -107,7 +107,7 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 
 ### McLeod Ganj (Upper Dharamshala)
 
-![McLeod Ganj](/images/dharmshala/mcleodganj-route.jpg)
+![McLeod Ganj](/images/dharmshala/mcleodganj-route.webp)
 *The vibrant streets of McLeod Ganj - Little Lhasa*
 
 **Tsuglagkhang Complex**
@@ -116,7 +116,7 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 - Tibet Museum with artifacts
 - Prayer wheels and stupas
 
-![Dalai Lama Temple](/images/dharmshala/dalai-lama-temple.jpg)
+![Dalai Lama Temple](/images/dharmshala/dalai-lama-temple.webp)
 *The peaceful Dalai Lama Temple complex*
 
 **Bhagsu Area**
@@ -144,15 +144,15 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 
 ### Triund Trek
 
-![Triund Trek](/images/dharmshala/mountain-trek.jpg)
+![Triund Trek](/images/dharmshala/mountain-trek.webp)
 *The scenic Triund trek path through oak forests*
 
-![Valley view](/images/dharmshala/valley-view.jpg)
+![Valley view](/images/dharmshala/valley-view.webp)
 *Breathtaking valley views from the trek*
 
 ### Palampur
 
-![Palampur tea gardens](/images/dharmshala/palampur-tea.jpg)
+![Palampur tea gardens](/images/dharmshala/palampur-tea.webp)
 *Lush green tea gardens of Palampur*
 
 **Tea Gardens**
@@ -161,7 +161,7 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 - Tea tasting sessions
 - Scenic plantation walks
 
-![Monastery](/images/dharmshala/monastery.jpg)
+![Monastery](/images/dharmshala/monastery.webp)
 *Peaceful monastery in the mountains*
 
 **Tashi Jong Monastery**
@@ -171,7 +171,7 @@ Escape the Delhi NCR chaos and immerse yourself in the spiritual and natural bea
 
 ### Kareri
 
-![Kareri Lake area](/images/dharmshala/kareri-lake.jpg)
+![Kareri Lake area](/images/dharmshala/kareri-lake.webp)
 *The pristine Kareri Lake region*
 
 | Trek Detail | Information |
