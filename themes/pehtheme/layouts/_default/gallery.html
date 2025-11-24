@@ -111,6 +111,33 @@
         </div>
       {{- end -}}
     {{- end -}}
+
+
+    <!-- Nainital -->
+    {{- $nainitalImages := resources.Match "images/nainital/*" -}}
+    {{- if $nainitalImages -}}
+      {{- $heroImage := "" -}}
+      {{- $galleryImages := slice -}}
+      {{- range $nainitalImages -}}
+        {{- if (strings.Contains .Name "hero") -}}
+          {{- $heroImage = .RelPermalink -}}
+        {{- else -}}
+          {{- $galleryImages = $galleryImages | append .RelPermalink -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $heroImage -}}
+        <div class="destination-tile" data-destination="Nainital" data-images="{{ delimit $galleryImages "," }}">
+          <div class="tile-image">
+            <img src="{{ $heroImage }}" alt="Nainital">
+          </div>
+          <div class="tile-overlay">
+            <h3>Nainital</h3>
+            <p>{{ len $galleryImages }} photos</p>
+            <span class="view-gallery">View Gallery</span>
+          </div>
+        </div>
+      {{- end -}}
+    {{- end -}}
   </div>
 
   <!-- Gallery Modal -->
