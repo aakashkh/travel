@@ -267,10 +267,3 @@ The combination of natural beauty, spiritual significance, and adventure makes t
 
 ***
 
-**Found this guide helpful?** Share your own trekking experiences in the comments below!
-
-**#KuariPass #Chopta #Tungnath #Chandrashila #HimalayanTrek #LordCurzonTrail``
-
-This file is ready to use with the Pehtheme Hugo theme. Place it in your `content/posts` folder (e.g., `content/posts/kuari-pass.md`), and it will render beautifully with all the theme’s styles and features including images, slider, ToC, and metadata.
-
-Let me know if you need assistance setting up or customizing the post further!

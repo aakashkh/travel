@@ -374,5 +374,3 @@ Dharamshala offers a perfect blend of spirituality, adventure, and natural beaut
 The journey from the bustling streets of Gurgaon to the serene mountains of Dharamshala is not just a physical transition but a spiritual one that leaves you refreshed and inspired.
 
 ---
-
-**#Dharamshala #McLeodGanj #Triund #DalaiLama #HimachalPradesh #MountainAir #TibetanCulture**
