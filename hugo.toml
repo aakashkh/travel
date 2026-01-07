@@ -28,6 +28,10 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 		pageRef = '/'
 		weight = 10
 	[[menu.main]]
+		name = 'Destinations'
+		pageRef = '/destinations'
+		weight = 12
+	[[menu.main]]
 		name = 'About'
 		pageRef = '/about'
 		weight = 15
