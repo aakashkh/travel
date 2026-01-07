@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8">
+  <header class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ .Description }}</p>
+  </header>
+
+  <div class="prose prose-lg max-w-none mb-12 mx-auto">
+    {{ .Content }}
+  </div>
+
+  {{ $destinations := .Site.Data.destinations }}
+  
+  <div class="grid gap-12">
+    {{ range $destinations }}
+    <article class="destination-card">
+      <div class="md:flex">
+        <div class="md:w-1/3">
+          <img src="{{ .image }}" alt="{{ .title }}" class="w-full h-64 md:h-full object-cover">
+        </div>
+        <div class="md:w-2/3 p-6">
+          <header class="mb-4">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ .title }}</h3>
+            <p class="text-gray-600 italic">{{ .description }}</p>
+            <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium mt-2">{{ len .posts }} Posts</span>
+          </header>
+          
+          <div class="grid md:grid-cols-2 gap-3">
+            {{ range .posts }}
+            <a href="{{ .url }}" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-1">{{ .title }}</h4>
+              <p class="text-sm text-gray-700">{{ .description }}</p>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
