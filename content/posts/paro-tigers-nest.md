@@ -3,7 +3,7 @@ title: "Paro Chronicles: Conquering Tiger's Nest and Finding Peace"
 date: 2025-01-18T10:00:00+05:30
 slug: /paro-personal-experience
 description: "My challenging trek to Tiger's Nest monastery, recovery with traditional hot stone baths, and discovering Paro's unique blend of sacred and modern life."
-image: /images/bhutan/tigers-nest-personal-trek.jpg
+image: /images/bhutan/paro/tiger_nest.webp
 caption: "The moment I first saw Tiger's Nest monastery clinging to the cliff - pure magic"
 categories:
   - International Travel
@@ -23,6 +23,8 @@ draft: false
 ## Arriving in Bhutan's Sacred Valley
 
 Paro felt different from the moment I arrived. This wide, beautiful valley houses Bhutan's only international airport, and watching planes navigate between towering peaks from the **Airport Viewpoint** was mesmerizing. The pilots need special certification to land here, and seeing them thread the needle between mountains made me appreciate the skill involved.
+
+![View of Paro Airport from the viewpoint](/images/bhutan/paro/paro_airport_view.webp)
 
 But Paro's real significance became clear as I explored - this isn't just a valley, it's Bhutan's spiritual heart, home to the legendary Tiger's Nest monastery that appears on every Bhutan postcard.
 
@@ -44,7 +46,7 @@ I won't sugarcoat it - this trek pushed me to my limits:
 **My Experience:**
 The first hour was deceptively easy, winding through pine forests. But as the path got steeper, my legs started burning and the thin air made every step an effort. I had to stop frequently, not just for photos but because I genuinely needed to catch my breath.
 
-`[IMAGE PLACEHOLDER: Me struggling up the steep rocky path with prayer flags in background]`
+![Tiger's Nest Monastery clinging to the cliffside](/images/bhutan/paro/tiger_nest.webp)
 
 ### The Moment of Magic
 
@@ -63,7 +65,7 @@ Entering the cool, quiet temples after the grueling climb felt like entering ano
 - **Architectural Wonder**: Rooms literally carved into the rock face
 - **Personal Achievement**: The satisfaction of reaching something so challenging
 
-`[IMAGE PLACEHOLDER: Interior shot of Tiger's Nest temple with valley views through traditional windows]`
+![Paro Dzong, an example of Bhutanese architecture](/images/bhutan/paro/paro_dzong.webp)
 
 ## Recovery: The Hot Stone Bath Experience
 
@@ -87,7 +89,7 @@ Watching the glowing stones being lowered into the tub was almost ceremonial. Th
 - **Cultural Connection**: Participating in centuries-old tradition
 - **Perfect Recovery**: Ready for more adventures the next day
 
-`[IMAGE PLACEHOLDER: Traditional wooden hot stone bath setup with glowing stones being added to steaming water]`
+![Traditional Bhutanese hot stone bath](/images/bhutan/paro/hot_stone.webp)
 
 ## Exploring Paro's Cultural Side
 
@@ -119,7 +121,12 @@ Paro's **market** and **street food** scene was smaller than Thimphu's but had i
 - **Butter Tea**: Perfect for cold mountain mornings
 - **Local Snacks**: Roasted barley and other traditional treats
 
-`[IMAGE PLACEHOLDER: Colorful Paro market scene with local vendors and traditional produce]`
+{{< carousel "paro-town" >}}
+images/bhutan/paro/paro_town_1.webp
+images/bhutan/paro/paro_town_2.webp
+images/bhutan/paro/paro_town_3.webp
+images/bhutan/paro/paro_town_4.webp
+{{< /carousel >}}
 
 ## Airport Viewpoint: Aviation Marvel
 
