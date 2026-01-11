@@ -1,13 +1,13 @@
 ---
-title: "Paro Chronicles: Of Sacred Cliffs and Sizzling Stones"
+title: "Paro Chronicles: Conquering Tiger's Nest and Finding Peace"
 date: 2025-01-18T10:00:00+05:30
 slug: /paro-personal-experience
-description: "A sensory journey through the Paro valley, from the rhythmic climb to Taktsang to the quiet steam of a traditional stone bath at 0 degrees."
-image: /images/bhutan/paro/paro_cover.webp
-caption: "The monastery doesn't just sit on the cliff; it seems to breathe with it."
+description: "My challenging trek to Tiger's Nest monastery, recovery with traditional hot stone baths, and discovering Paro's unique blend of sacred and modern life."
+image: /images/bhutan/tigers-nest-personal-trek.jpg
+caption: "The moment I first saw Tiger's Nest monastery clinging to the cliff - pure magic"
 categories:
   - International Travel
-  - Experience
+  - Trekking
 tags:
   - paro
   - tigers-nest
