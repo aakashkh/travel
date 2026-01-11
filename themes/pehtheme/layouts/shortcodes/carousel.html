@@ -14,7 +14,7 @@
             {{- $caption := index $parts 1 -}}
             <div class="carousel-slide {{ if eq $index 0 }}active{{ end }}" data-slide="{{ $index }}">
               {{- with resources.Get $imagePath -}}
-                {{- $resized := .Resize "1200x800" -}}
+                {{- $resized := .Fit "1400x700" -}}
                 <img src="{{ $resized.Permalink }}" alt="{{ $caption }}" loading="lazy">
               {{- end -}}
               {{- if $caption -}}
@@ -75,14 +75,19 @@
 .carousel-slides {
   position: relative;
   width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 500px; /* Fixed height */
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .carousel-slides {
-    padding-bottom: 50%; /* Slightly less height on larger screens */
+    height: 600px; /* Larger fixed height on bigger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-slides {
+    height: 700px; /* Even larger on desktop */
   }
 }
 
