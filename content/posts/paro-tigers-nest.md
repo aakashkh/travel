@@ -28,7 +28,9 @@ Paro doesn't announce itself; it unfolds. We headed to the **Airport Viewpoint**
 
 The path to the Tiger's Nest is paved with the scent of sun-warmed pine needles and the distant, rhythmic creak of prayer wheels. As the incline grew steeper and the air thinner, I found myself in a silent dialogue with the mountain. 
 
-It was a grueling climb, but it brought a moment of clarity: *“कठिन रास्तों से ही खूबसूरत मंजिलें मिलती हैं”* (Beautiful destinations are only reached via difficult paths). Reaching the top wasn't just about the view; it was a quiet realization of my own limits and a sudden, burning desire to stay fit, to ensure I can keep chasing these Himalayan heights for years to come. Inside the monastery, the cool darkness and whispered prayers made the world below feel like a distant dream.
+It was a grueling climb, but it brought a moment of clarity:  
+*“मंज़िल की खूबसूरती का अंदाज़ा अक्सर रास्तों की मुश्किलों से ही लगाया जाता है”*  
+Reaching the top wasn't just about the view; it was a quiet realization of my own limits and a sudden, burning desire to stay fit, to ensure I can keep chasing these Himalayan heights for years to come. Inside the monastery, the cool darkness and whispered prayers made the world below feel like a distant dream.
 
 ![Tiger's Nest Monastery clinging to the cliffside](/images/bhutan/paro/tiger_nest.webp)
 
