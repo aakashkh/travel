@@ -50,6 +50,7 @@ The water was shockingly cold—a reminder of the glaciers that birthed it—but
 {{< carousel "rafting" >}}
 images/bhutan/punakha/rafting_view.webp | Rafting on the gentle Mo Chhu
 images/bhutan/punakha/rafting_view_01.webp | Soaking in the valley views from the raft
+images/bhutan/punakha/rafting_view_02.webp | Rafting with friends
 {{< /carousel >}}
 
 ## The Palace of Great Happiness
