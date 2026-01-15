@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{- partial "content/breadcrumb.html" . -}}
+
+<div class="mb-14">
+    <h2 class="text-3xl font-bold mb-10">{{ .Title | humanize }}</h2>
+
+    {{/* Unified logic: Display Sections if available (Root), otherwise Pages (Sub-destinations) */}}
+    {{ $items := .Pages }}
+    {{ if .Sections }}
+    {{ $items = .Sections }}
+    {{ end }}
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-6">
+        {{ range $items }}
+        {{- partial "content/card.html" . -}}
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}

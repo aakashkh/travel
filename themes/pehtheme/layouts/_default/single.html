@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{- partial "content/breadcrumb.html" . -}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+<div class="max-w-7xl mx-auto mb-14">
 
-  <article class="md:col-span-2 prose lg:prose-lg">
+  <article class="prose lg:prose-xl max-w-none mx-auto">
 
     <header class="not-prose">
-      
+
       <h1 id="title" class="text-4xl font-bold leading-normal">{{ .Title }}</h1>
 
       <div id="lead" class="my-6">
@@ -14,22 +14,23 @@
         <p class="font-bold">{{ .Params.description }} </p>
 
       </div>
-           
-      
-      <div id="writer" class="flex items-center space-x-4">
+
+
+      <div id="writer" class="flex flex-col items-start space-y-4">
 
         {{- $name := .Site.Params.Author.name -}}
 
         {{- with $avatar := resources.Get .Site.Params.Author.avatar }}
 
-        <img class="w-12 h-12 bg-black rounded-full" src="{{ $avatar.Permalink }}" alt="{{ $name }} avatar" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">
+        <img class="w-12 h-12 bg-black rounded-full" src="{{ $avatar.Permalink }}" alt="{{ $name }} avatar"
+          width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">
 
         {{ end -}}
-        
+
         <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
-          
+
           <li class="font-semibold my-2">{{ .Site.Params.Author.name }}</li>
-          
+
           <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
             {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
             {{- $dateHuman := .Date | time.Format ":date_long" -}}
@@ -42,31 +43,36 @@
 
         </ul>
 
+        <div class="mt-4">
+          {{- partial "terms.html" (dict "taxonomy" "categories" "page" .) -}}
+        </div>
+
       </div>
-      
+
     </header>
 
     <figure id="featureimage" class="rounded-xl aspect-video">
 
       {{- if .Params.image }}
 
-        {{- if ( strings.HasPrefix .Params.image "http" ) }}
+      {{- if ( strings.HasPrefix .Params.image "http" ) }}
 
-          <img class="rounded-lg" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+      <img class="rounded-lg" src="{{ .Params.image }}" alt="{{ .Params.title }}">
 
-        {{- else }}
+      {{- else }}
 
-          {{- with $image := resources.Get .Params.image }}
-            {{- $image := $image.Resize "750x" }}
-            <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
-          {{- end }}
+      {{- with $image := resources.Get .Params.image }}
+      {{- $image := $image.Resize "750x" }}
+      <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}"
+        height="{{ $image.Height }}">
+      {{- end }}
 
-        {{- end }}
+      {{- end }}
 
       {{- end }}
 
       {{- if ( isset .Params "caption" ) }}
-        <figcaption class="text-center italic text-xs">{{ .Params.caption }}</figcaption>
+      <figcaption class="text-center italic text-xs">{{ .Params.caption }}</figcaption>
       {{- end }}
 
     </figure>
@@ -83,8 +89,11 @@
       <!-- Gallery CTA -->
       <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mt-8 mb-6">
         <h3 class="text-lg font-semibold text-blue-900 mb-2">📸 More Travel Photos</h3>
-        <p class="text-blue-700 mb-4">Explore our complete collection of travel photographs from various destinations</p>
-        <a href="/gallery" class="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors">View Photo Gallery</a>
+        <p class="text-blue-700 mb-4">Explore our complete collection of travel photographs from various destinations
+        </p>
+        <a href="/gallery"
+          class="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors">View
+          Photo Gallery</a>
       </div>
 
     </div>
@@ -97,7 +106,7 @@
 
         {{- $related := .Site.RegularPages.Related . | first 2 -}}
         {{- if not $related -}}
-          {{- $related = where .Site.RegularPages "Section" "posts" | first 2 -}}
+        {{- $related = where .Site.RegularPages "Section" "posts" | first 2 -}}
         {{- end -}}
 
         {{- with $related -}}
@@ -109,13 +118,13 @@
           {{- partial "content/card.html" . -}}
 
           {{- end }}
-          
+
         </div>
 
         {{- else -}}
-        
+
         <p class="text-gray-600">No related posts found.</p>
-        
+
         {{- end }}
       </div>
 
@@ -123,13 +132,6 @@
 
   </article>
 
-  <!-- Aside -->
-  <aside class="md:col-span-1">
-
-    {{- partial "content/aside.html" . -}}
-    
-  </aside>
-
 </div>
-  
+
 {{ end }}

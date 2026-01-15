@@ -11,7 +11,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 [params]
 	# Meta description, not exceeding 160 characters, used for the meta description within the HTML head
 	description = 'Pehtheme Hugo Lite: A minimalist Hugo theme, built with TailwindCSS, for efficient performance and minimalism.'
-	mainSections = 'posts'
+	mainSections = 'destinations'
 
 [author]
 	name = 'Anthony Arphan'
@@ -23,14 +23,8 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 	pagerSize = 6 # <- Set the desired number of posts per page 
 
 [menu] # Menu management
-	[[menu.main]]
-		name = 'Home'
-		pageRef = '/'
-		weight = 10
-	[[menu.main]]
-		name = 'About'
-		pageRef = '/about'
-		weight = 15
+
+
 	[[menu.main]]
 		name = 'Gallery'
 		pageRef = '/gallery'

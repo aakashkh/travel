@@ -4,14 +4,17 @@
   "description": "An open-source Hugo theme lovingly crafted using Tailwind CSS.",
   "main": "index.js",
   "scripts": {
-    "dev:generate": "npx tailwindcss -i ./assets/input.css -o ./themes/pehtheme-hugo/assets/css/main.css -w",
+    "dev:generate": "npx tailwindcss -i ./assets/input.css -o ./themes/pehtheme/assets/css/main.css -w",
     "dev:hugo": "hugo server",
     "dev": "run-p dev:*",
     "build:generate": "npx tailwindcss -i ./assets/input.css -o ./themes/pehtheme/static/assets/css/main.css",
     "build:hugo": "hugo",
     "build": "run-p build:*"
   },
-  "keywords": ["hugo", "tailwindcss"],
+  "keywords": [
+    "hugo",
+    "tailwindcss"
+  ],
   "author": "Fauzan My",
   "license": "MIT",
   "devDependencies": {
