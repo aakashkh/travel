@@ -100,33 +100,7 @@
 
     <footer id="content-footer" class="not-prose">
 
-      <div id="related-post" class="">
 
-        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2>
-
-        {{- $related := .Site.RegularPages.Related . | first 2 -}}
-        {{- if not $related -}}
-        {{- $related = where .Site.RegularPages "Section" "posts" | first 2 -}}
-        {{- end -}}
-
-        {{- with $related -}}
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          {{- range . }}
-
-          {{- partial "content/card.html" . -}}
-
-          {{- end }}
-
-        </div>
-
-        {{- else -}}
-
-        <p class="text-gray-600">No related posts found.</p>
-
-        {{- end }}
-      </div>
 
     </footer>
 

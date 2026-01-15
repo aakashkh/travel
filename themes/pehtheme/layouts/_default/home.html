@@ -1,12 +1,13 @@
 {{ define "main" }}
 
-<div class="mb-14">
-  <h2 class="text-3xl font-bold mb-10">Destinations</h2>
+<div class="mb-14 mt-10">
 
   {{ $destinations := .Site.GetPage "section" "destinations" }}
   <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-6">
     {{ range $destinations.Sections }}
+    {{ if gt (len .RegularPages) 0 }}
     {{- partial "content/card.html" . -}}
+    {{ end }}
     {{ end }}
   </div>
 </div>
