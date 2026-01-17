@@ -1,0 +1,40 @@
+{{- $dest := .Destination -}}
+{{- $path := $dest -}}
+{{- $width := "" -}}
+{{- $height := "" -}}
+
+{{- if strings.Contains $dest "?" -}}
+{{- $parts := split $dest "?" -}}
+{{- $path = index $parts 0 -}}
+{{- $query := index $parts 1 -}}
+
+{{- $params := split $query "&" -}}
+{{- range $params -}}
+{{- $kv := split . "=" -}}
+{{- if eq (index $kv 0) "width" -}}
+{{- $width = index $kv 1 -}}
+{{- end -}}
+{{- if eq (index $kv 0) "height" -}}
+{{- $height = index $kv 1 -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- $image := .Page.Resources.GetMatch $path -}}
+{{- if not $image -}}
+{{- $image = resources.Get $path -}}
+{{- end -}}
+
+{{- if $image -}}
+<!-- DEBUG: Width='{{ $width }}' Height='{{ $height }}' Path='{{ $path }}' Original='{{ .Destination }}' -->
+<img src="{{ $image.Permalink }}" alt="{{ .Text }}"
+  class="max-h-[600px] w-auto mx-auto rounded-lg shadow-md object-contain my-6" loading="lazy" {{ with .Title
+  }}title="{{ . }}" {{ end }}
+  style="{{ if $width }}width: {{ $width }} !important;{{ end }} {{ if $height }}height: {{ $height }} !important;{{ end }}">
+{{- else -}}
+<!-- DEBUG: Width='{{ $width }}' Height='{{ $height }}' Path='{{ $path }}' Original='{{ .Destination }}' -->
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"
+  class="max-h-[600px] w-auto mx-auto rounded-lg shadow-md object-contain my-6" loading="lazy" {{ with .Title
+  }}title="{{ . }}" {{ end }}
+  style="{{ if $width }}width: {{ $width }} !important;{{ end }} {{ if $height }}height: {{ $height }} !important;{{ end }}">
+{{- end -}}

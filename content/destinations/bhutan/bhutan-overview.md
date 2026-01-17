@@ -92,10 +92,12 @@ The transition back into **Siliguri** was a sensory shock. The traffic, the voic
 
 ## Final Reflections
 
+
+
+![Winding roads of Bhutan](/images/bhutan/bhutan/hilly_raods.webp?width=50%)
+
 People ask what makes Bhutan special. It’s not just the Dzongs or the views. It’s the way the country invites you to stop. It’s the stillness of the river in Punakha, the focus required for archery in Thimphu, and the physical realization  on the steep cliffs of Taktsang that a difficult path is the only one worth taking.
 
 I left Gurgaon looking for a trip; I left Bhutan with a new pace of life. The mountains stay behind, but the calmness of the Punakha river and the warmth of the butter tea stay with me.
 
 **Bhutan, you were a reminder that sometimes, the best way to move forward is to simply sit still and watch the clouds.**
-
-![Winding roads of Bhutan](/images/bhutan/bhutan/hilly_raods.webp)

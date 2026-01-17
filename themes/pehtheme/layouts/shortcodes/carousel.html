@@ -7,26 +7,26 @@
     <div class="carousel-container">
       <div class="carousel-slides">
         {{- range $index, $line := $images -}}
-          {{- $cleanLine := $line | strings.TrimSpace | strings.TrimSuffix "\r" -}}
-          {{- if $cleanLine -}}
-            {{- $parts := split $cleanLine "|" -}}
-            {{- $imagePath := index $parts 0 | strings.TrimSpace -}}
-            {{- $caption := index $parts 1 -}}
-            <div class="carousel-slide {{ if eq $index 0 }}active{{ end }}" data-slide="{{ $index }}">
-              {{- with resources.Get $imagePath -}}
-                {{- $resized := .Fit "1400x700" -}}
-                <img src="{{ $resized.Permalink }}" alt="{{ $caption }}" loading="lazy">
-              {{- end -}}
-              {{- if $caption -}}
-                <div class="slide-caption">
-                  <p>{{ $caption }}</p>
-                </div>
-              {{- end -}}
-            </div>
+        {{- $cleanLine := $line | strings.TrimSpace | strings.TrimSuffix "\r" -}}
+        {{- if $cleanLine -}}
+        {{- $parts := split $cleanLine "|" -}}
+        {{- $imagePath := index $parts 0 | strings.TrimSpace -}}
+        {{- $caption := index $parts 1 -}}
+        <div class="carousel-slide {{ if eq $index 0 }}active{{ end }}" data-slide="{{ $index }}">
+          {{- with resources.Get $imagePath -}}
+          {{- $resized := .Resize "1600x" -}}
+          <img src="{{ $resized.Permalink }}" alt="{{ $caption }}" loading="lazy">
           {{- end -}}
+          {{- if $caption -}}
+          <div class="slide-caption">
+            <p>{{ $caption }}</p>
+          </div>
+          {{- end -}}
+        </div>
+        {{- end -}}
         {{- end -}}
       </div>
-      
+
       <!-- Navigation Arrows -->
       <button class="carousel-nav prev" aria-label="Previous slide">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -38,14 +38,15 @@
           <polyline points="9,18 15,12 9,6"></polyline>
         </svg>
       </button>
-      
+
       <!-- Dots Indicator -->
       <div class="carousel-dots">
         {{- range $index, $line := $images -}}
-          {{- $cleanLine := $line | strings.TrimSpace | strings.TrimSuffix "\r" -}}
-          {{- if $cleanLine -}}
-            <button class="dot {{ if eq $index 0 }}active{{ end }}" data-slide="{{ $index }}" aria-label="Go to slide {{ add $index 1 }}"></button>
-          {{- end -}}
+        {{- $cleanLine := $line | strings.TrimSpace | strings.TrimSuffix "\r" -}}
+        {{- if $cleanLine -}}
+        <button class="dot {{ if eq $index 0 }}active{{ end }}" data-slide="{{ $index }}"
+          aria-label="Go to slide {{ add $index 1 }}"></button>
+        {{- end -}}
         {{- end -}}
       </div>
     </div>
@@ -53,357 +54,365 @@
 </div>
 
 <style>
-.modern-carousel {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.carousel-slides {
-  position: relative;
-  width: 100%;
-  height: 500px; /* Fixed height */
-  overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .carousel-slides {
-    height: 600px; /* Larger fixed height on bigger screens */
+  .modern-carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
   }
-}
 
-@media (min-width: 1024px) {
-  .carousel-slides {
-    height: 700px; /* Even larger on desktop */
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
-}
 
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+  }
 
-.carousel-slide.active {
-  opacity: 1;
-  transform: translateX(0);
-  z-index: 2;
-}
+  .carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Fixed height */
+    overflow: hidden;
+  }
 
-.carousel-slide.prev {
-  transform: translateX(-100%);
-}
+  @media (min-width: 768px) {
+    .carousel-slides {
+      height: 600px;
+      /* Larger fixed height on bigger screens */
+    }
+  }
 
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 0;
-}
+  @media (min-width: 1024px) {
+    .carousel-slides {
+      height: 700px;
+      /* Even larger on desktop */
+    }
+  }
 
-.slide-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  color: white;
-  padding: 40px 24px 24px;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.carousel-slide.active .slide-caption {
-  transform: translateY(0);
-}
+  .carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+  }
 
-.slide-caption p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-}
+  .carousel-slide.prev {
+    transform: translateX(-100%);
+  }
 
-@media (min-width: 768px) {
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 0;
+  }
+
   .slide-caption {
-    padding: 60px 32px 32px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 40px 24px 24px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
   }
-  
+
+  .carousel-slide.active .slide-caption {
+    transform: translateY(0);
+  }
+
   .slide-caption p {
-    font-size: 16px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
   }
-}
 
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-}
+  @media (min-width: 768px) {
+    .slide-caption {
+      padding: 60px 32px 32px;
+    }
 
-.modern-carousel:hover .carousel-nav {
-  opacity: 1;
-  visibility: visible;
-}
+    .slide-caption p {
+      font-size: 16px;
+    }
+  }
 
-.carousel-nav:hover {
-  background: white;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.carousel-nav.prev {
-  left: 16px;
-}
-
-.carousel-nav.next {
-  right: 16px;
-}
-
-.carousel-nav svg {
-  width: 20px;
-  height: 20px;
-  stroke-width: 2.5;
-  color: #333;
-}
-
-.carousel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.carousel-dots .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.carousel-dots .dot:hover,
-.carousel-dots .dot.active {
-  background: white;
-  transform: scale(1.25);
-}
-
-/* Loading animation */
-.carousel-slide img {
-  animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Touch indicators */
-@media (max-width: 767px) {
   .carousel-nav {
-    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
   }
-  
+
+  .modern-carousel:hover .carousel-nav {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .carousel-nav:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .carousel-nav.prev {
+    left: 16px;
+  }
+
+  .carousel-nav.next {
+    right: 16px;
+  }
+
+  .carousel-nav svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+    color: #333;
+  }
+
   .carousel-dots {
-    bottom: 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
   }
-  
-  .carousel-slides {
-    touch-action: pan-y;
+
+  .carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-}
+
+  .carousel-dots .dot:hover,
+  .carousel-dots .dot.active {
+    background: white;
+    transform: scale(1.25);
+  }
+
+  /* Loading animation */
+  .carousel-slide img {
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Touch indicators */
+  @media (max-width: 767px) {
+    .carousel-nav {
+      display: none;
+    }
+
+    .carousel-dots {
+      bottom: 12px;
+    }
+
+    .carousel-slides {
+      touch-action: pan-y;
+    }
+  }
 </style>
 
 <script>
-(function() {
-  function initCarousel() {
-    const carousel = document.getElementById('carousel-{{ $id }}');
-    if (!carousel) {
-      setTimeout(initCarousel, 100);
-      return;
-    }
+  (function () {
+    function initCarousel() {
+      const carousel = document.getElementById('carousel-{{ $id }}');
+      if (!carousel) {
+        setTimeout(initCarousel, 100);
+        return;
+      }
 
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const dots = carousel.querySelectorAll('.dot');
-    const prevBtn = carousel.querySelector('.prev');
-    const nextBtn = carousel.querySelector('.next');
-    
-    let currentSlide = 0;
-    let isAnimating = false;
-    let autoplayInterval;
-    let touchStartX = 0;
-    let touchEndX = 0;
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dots = carousel.querySelectorAll('.dot');
+      const prevBtn = carousel.querySelector('.prev');
+      const nextBtn = carousel.querySelector('.next');
 
-    function updateSlides() {
-      if (isAnimating) return;
-      
-      isAnimating = true;
-      
-      slides.forEach((slide, index) => {
-        slide.classList.remove('active', 'prev');
-        
-        if (index === currentSlide) {
-          slide.classList.add('active');
-        } else if (index < currentSlide) {
-          slide.classList.add('prev');
-        }
-      });
+      let currentSlide = 0;
+      let isAnimating = false;
+      let autoplayInterval;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      function updateSlides() {
+        if (isAnimating) return;
+
+        isAnimating = true;
+
+        slides.forEach((slide, index) => {
+          slide.classList.remove('active', 'prev');
+
+          if (index === currentSlide) {
+            slide.classList.add('active');
+          } else if (index < currentSlide) {
+            slide.classList.add('prev');
+          }
+        });
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentSlide);
+        });
+
+        setTimeout(() => {
+          isAnimating = false;
+        }, 600);
+      }
+
+      function nextSlide() {
+        if (isAnimating) return;
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlides();
+      }
+
+      function prevSlide() {
+        if (isAnimating) return;
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlides();
+      }
+
+      function goToSlide(index) {
+        if (isAnimating || index === currentSlide) return;
+        currentSlide = index;
+        updateSlides();
+      }
+
+      function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 5000);
+      }
+
+      function stopAutoplay() {
+        clearInterval(autoplayInterval);
+      }
+
+      // Event listeners
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          stopAutoplay();
+          setTimeout(startAutoplay, 3000);
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          stopAutoplay();
+          setTimeout(startAutoplay, 3000);
+        });
+      }
 
       dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
+        dot.addEventListener('click', () => {
+          goToSlide(index);
+          stopAutoplay();
+          setTimeout(startAutoplay, 3000);
+        });
       });
 
-      setTimeout(() => {
-        isAnimating = false;
-      }, 600);
-    }
-
-    function nextSlide() {
-      if (isAnimating) return;
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlides();
-    }
-
-    function prevSlide() {
-      if (isAnimating) return;
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      updateSlides();
-    }
-
-    function goToSlide(index) {
-      if (isAnimating || index === currentSlide) return;
-      currentSlide = index;
-      updateSlides();
-    }
-
-    function startAutoplay() {
-      autoplayInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopAutoplay() {
-      clearInterval(autoplayInterval);
-    }
-
-    // Event listeners
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
+      // Touch/swipe support
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
         stopAutoplay();
+      });
+
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
         setTimeout(startAutoplay, 3000);
       });
-    }
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoplay();
-        setTimeout(startAutoplay, 3000);
-      });
-    }
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        goToSlide(index);
-        stopAutoplay();
-        setTimeout(startAutoplay, 3000);
-      });
-    });
-
-    // Touch/swipe support
-    carousel.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      stopAutoplay();
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-      setTimeout(startAutoplay, 3000);
-    });
-
-    function handleSwipe() {
-      const swipeThreshold = 50;
-      const diff = touchStartX - touchEndX;
-
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-          nextSlide();
-        } else {
-          prevSlide();
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
         }
+      }
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (carousel.matches(':hover')) {
+          if (e.key === 'ArrowLeft') {
+            prevSlide();
+            stopAutoplay();
+            setTimeout(startAutoplay, 3000);
+          } else if (e.key === 'ArrowRight') {
+            nextSlide();
+            stopAutoplay();
+            setTimeout(startAutoplay, 3000);
+          }
+        }
+      });
+
+      // Pause on hover
+      carousel.addEventListener('mouseenter', stopAutoplay);
+      carousel.addEventListener('mouseleave', startAutoplay);
+
+      // Initialize
+      updateSlides();
+      if (slides.length > 1) {
+        startAutoplay();
       }
     }
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (carousel.matches(':hover')) {
-        if (e.key === 'ArrowLeft') {
-          prevSlide();
-          stopAutoplay();
-          setTimeout(startAutoplay, 3000);
-        } else if (e.key === 'ArrowRight') {
-          nextSlide();
-          stopAutoplay();
-          setTimeout(startAutoplay, 3000);
-        }
-      }
-    });
-
-    // Pause on hover
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-
-    // Initialize
-    updateSlides();
-    if (slides.length > 1) {
-      startAutoplay();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+      initCarousel();
     }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  } else {
-    initCarousel();
-  }
-})();
+  })();
 </script>
