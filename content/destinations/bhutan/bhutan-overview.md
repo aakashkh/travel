@@ -65,9 +65,9 @@ images/bhutan/bhutan/tshogyal.webp | A copy of Tshogyal, a memory brought home
 
 Explore the detailed stories and random thoughts from each valley we visited:
 
-* 🏛️ **[Thimphu: Night Streets and Painted Wood](/posts/thimphu-travelogue-experience)**
-* 🏰 **[Punakha: Where the Rivers Whisper and Time Stands Still](/posts/punakha-the-heart-of-bhutan)**
-* 🏔️ **[Paro: Of Sacred Cliffs and Sizzling Stones](/posts/paro-personal-experience)**
+* 🏛️ **[Thimphu: Night Streets and Painted Wood](/destinations/bhutan/thimphu-travelogue-experience)**
+* 🏰 **[Punakha: Where the Rivers Whisper and Time Stands Still](/destinations/bhutan/punakha-the-heart-of-bhutan)**
+* 🏔️ **[Paro: Of Sacred Cliffs and Sizzling Stones](/destinations/bhutan/paro-personal-experience)**
 
 
 ## The Winding Way Back: Bringing the Mountains Home

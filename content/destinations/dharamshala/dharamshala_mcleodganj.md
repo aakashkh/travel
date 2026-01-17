@@ -74,16 +74,16 @@ Every day brought unexpected discoveries. From my manager's warm hospitality to 
 
 Each area offered unique experiences that I've documented in detail:
 
-### 🏔️ [My Dharamshala Experience: Temples, Memorials, and Mountain Vibes](/posts/dharamshala-personal-experience)
+### 🏔️ [My Dharamshala Experience: Temples, Memorials, and Mountain Vibes](/destinations/dharamshala/dharamshala-personal-experience)
 From spiritual temple visits to honoring war heroes, discover how Dharamshala's blend of culture and history created lasting memories.
 
-### 🏛️ [McLeodganj Adventures: Waterfalls, Ropeways, and Tibetan Culture](/posts/mcleodganj-personal-experience)  
+### 🏛️ [McLeodganj Adventures: Waterfalls, Ropeways, and Tibetan Culture](/destinations/dharamshala/mcleodganj-personal-experience)  
 My exploration of Little Lhasa—from the refreshing Bhagsu Nag Waterfall to the thrilling ropeway views and vibrant Dalai Lama Temple experiences.
 
-### 🍃 [Palampur Chronicles: Tea Gardens and Ancient Temples](/posts/palampur-personal-experience)
+### 🍃 [Palampur Chronicles: Tea Gardens and Ancient Temples](/destinations/dharamshala/palampur-personal-experience)
 Wandering through lush Wah Tea Estate, learning tea-making processes, and exploring the ancient Baijnath Temple's architectural beauty.
 
-### 🏞️ [Kareri Village Life: Nature Pools and Valley Views](/posts/kareri-personal-experience)
+### 🏞️ [Kareri Village Life: Nature Pools and Valley Views](/destinations/dharamshala/kareri-personal-experience)
 My final day adventure in Kareri—from the unique Nature Pool Cafe to exploring Kharota Valley's scenic trails and connecting with fellow travelers.
 
 ## Personal Reflections

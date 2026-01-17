@@ -98,4 +98,4 @@ My mornings were reserved for solitary walks. Walking through Punakha in the ear
 
 ---
 
-**Next, we prepare for the final ascent: [The Paro chapter](/posts/paro-tigers-nest), where the legendary Tiger's Nest awaits.**
+**Next, we prepare for the final ascent: [The Paro chapter](/destinations/bhutan/paro-tigers-nest), where the legendary Tiger's Nest awaits.**

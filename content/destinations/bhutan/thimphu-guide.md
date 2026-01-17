@@ -83,4 +83,4 @@ The evening ended in the most unexpected way: **Karaoke**. In a small bar, we sa
 
 **Shall we move on to the Punakha chapter next, where we can talk about the river rafting and the warmth of the valley?**
 
-*Next in my Bhutan journey: [Punakha Adventures](/posts/punakha-personal-experience) - rivers, rafting, and ancient fortresses.*
+*Next in my Bhutan journey: [Punakha Adventures](/destinations/bhutan/punakha-personal-experience) - rivers, rafting, and ancient fortresses.*
